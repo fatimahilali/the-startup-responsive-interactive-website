@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEPT®</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="https://www.deptagency.com/wp-content/uploads/2024/09/dept-logo.svg" alt="DEPT® logo">
+    </div>
+    <button class="menu-button">Menu</button>
+    <!-- Regencontainer indien nodig -->
+    <div id="rain-container"></div>
+  </header>
+  
+  <main class="main-content">
+    <h1 class="main-title">
+        Weather.<br>Your.<br><span>Way.</span>
+    </h1>
+
+    <div class="page-wrapper">
+      <div class="blur-overlay"></div>
+
+      <section class="content-container">
+        <div class="extra-content">
+          <h1 class="logo">DEPT®</h1>
+          <h2>DEPT® Weather Planner</h2>
+          <p>
+            Picture this: an application that doesn't just tell you the weather, but also helps you plan your activities around it. Imagine knowing exactly the perfect day to plan that hike, or when to avoid the outdoor concert due to an unexpected shower. That's exactly what the Dept Weather Planner offers you.
+          </p>
+          <p>
+            Built with cutting-edge technologies, our weather planner brings you accurate, real-time weather data with a slick and user-friendly interface. But it's not just a weather app; it's an intuitive daily planner that syncs with the weather. With a range of activities to choose from, it suggests the best options based on current and forecasted weather conditions.
+          </p>
+          <a href="#" class="read-less">Read less</a>
+        </div>
+        <button class="toggle-content-btn">READ MORE</button>
+      </section>
+    </div>
+
+    <section class="video-section">
+      <video autoplay loop muted playsinline class="video-background">
+        <source src="video/4K Beautiful Anime Scenery.mp4" type="video/mp4">
+      </video>
+    </section>
+
+  </main>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+ <script src="script/rain-animation.js"></script>
+ <script src="script/content-toggle.js"></script>
+ <script src="script/intro-animation.js"></script>
+
+</body>
+</html>
