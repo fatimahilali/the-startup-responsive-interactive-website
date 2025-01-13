@@ -52,6 +52,7 @@
     color: var(--text-color);
     cursor: pointer;
     justify-self: end; 
+    
   }
   
   /* Regencontainer */
@@ -200,12 +201,13 @@
     color: #121212;
     background-color: #FFFFFF;
     padding: 0.75rem 1.875rem; 
-    border-radius: 1.875rem; 
     cursor: pointer;
     text-transform: uppercase;
     display: block;
     margin: 1.25rem auto; 
     text-align: center;
+    border: 0.0625rem solid var(--border-color); 
+    border-radius: 3.125rem; 
   }
   
   .toggle-content-btn:hover {
