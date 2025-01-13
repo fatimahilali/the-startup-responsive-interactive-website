@@ -239,83 +239,78 @@
     color: #cccccc;
   }
   
-  /* Forecast-sectie */
-  .forecast-section {
-    margin: 5rem auto; 
-    max-width: 100%;
-    margin-inline-end: 6.875rem;
-  }
-  
-  .section-title {
-    font-size: 0.9rem;
-    font-weight: var(--font-weight-normal);
-    text-transform: uppercase;
-    color: var(--light-text);
-    margin-bottom: 1.25rem;
-    margin-inline-end: 9.6875rem; 
-  }
-  
-  
-  .temperature-title {
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-normal);
-    text-transform: uppercase;
-    color: var(--light-text);
-    margin-bottom: 1.5rem;
-    margin-inline-end: 9.6875rem; 
-  
-  }
-  
-  .forecast-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .forecast-item {
-    padding: 0.625rem 0; 
-  }
-  
-  .forecast-item:last-child {
-    border-bottom: none;
-  }
-  
-  .forecast-item .day {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    margin-bottom: 0.625rem;
-    display: block;
-    margin-inline-end: 9.6875rem;
-  }
-  
-  .details {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    gap: 1.25rem;
-    align-items: center;
-  }
-  
 
-  
-  /* CSS Iconen */
-  .icon {
-    width: 1.25rem; 
-    height: 1.25rem; 
-    display: inline-block;
-  }
-  
-  .icon.sun {
-    background: radial-gradient(circle, #f90 50%, transparent 51%);
-    border-radius: 50%;
-    position: relative;
-  }
-  
-  .icon.water::before {
-   content: '💧';
-   position: relative;
-   font-size: 1rem;
-    }
-  
+
+  /* Forecast-sectie */
+.forecast-section {
+  margin: 1.5rem auto;
+  width: 85%; 
+  padding: 1.25rem;
+  text-align: left; 
+  border-radius: 0.625rem; 
+}
+
+.forecast-list {
+  list-style: none; 
+}
+
+
+.section-title {
+  font-size: 1rem; 
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--text-color); 
+  margin-bottom: 1.5rem; 
+}
+
+
+.details {
+  display: grid; 
+  grid-template-columns: repeat(6, auto); /* Verdeel in zes gelijke kolommen */
+  gap: 0.5rem;
+  align-items: center; 
+}
+
+
+.forecast-item {
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color); 
+}
+
+.forecast-item .day {
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color); 
+  margin-bottom: 0; 
+}
+
+.forecast-item:last-child {
+  border-bottom: none; /* Verwijder scheiding bij het laatste item */
+}
+
+
+
+
+/* Iconen stijl */
+.icon {
+  width: 1.5rem; 
+  height: 1.5rem;
+  display: inline-block;
+}
+
+.icon.sun {
+  background: radial-gradient(circle, #f90 50%, transparent 51%); 
+  border-radius: 50%; 
+}
+
+.icon.water::before {
+  content: '💧'; 
+  font-size: 1.2rem; 
+  position: relative;
+}
+
   /* Newsletter-sectie */
   .newsletter-section {
     margin: 1.25rem auto; 
@@ -395,4 +390,16 @@
     margin-top: 1.25rem; 
     line-height: 1.8; 
   }
+    
+  .temperature-title {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    color: var(    --primary-color);
+    margin-bottom: 1.5rem;
+    margin-right: 70px;
   
+  }
+
+
+
