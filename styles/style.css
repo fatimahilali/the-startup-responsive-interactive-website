@@ -1,4 +1,8 @@
+
 /* Algemene code voor mobiel first version */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -227,3 +231,168 @@
     text-decoration: none;
     color: #cccccc;
   }
+
+
+
+  .read-less:hover {
+    text-decoration: none;
+    color: #cccccc;
+  }
+  
+  /* Forecast-sectie */
+  .forecast-section {
+    margin: 5rem auto; 
+    max-width: 100%;
+    margin-inline-end: 6.875rem;
+  }
+  
+  .section-title {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    color: var(--light-text);
+    margin-bottom: 1.25rem;
+    margin-inline-end: 9.6875rem; 
+  }
+  
+  
+  .temperature-title {
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    margin-inline-end: 9.6875rem; 
+  
+  }
+  
+  .forecast-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .forecast-item {
+    padding: 0.625rem 0; 
+  }
+  
+  .forecast-item:last-child {
+    border-bottom: none;
+  }
+  
+  .forecast-item .day {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 0.625rem;
+    display: block;
+    margin-inline-end: 9.6875rem;
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 1.25rem;
+    align-items: center;
+  }
+  
+
+  
+  /* CSS Iconen */
+  .icon {
+    width: 1.25rem; 
+    height: 1.25rem; 
+    display: inline-block;
+  }
+  
+  .icon.sun {
+    background: radial-gradient(circle, #f90 50%, transparent 51%);
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .icon.water::before {
+   content: '💧';
+   position: relative;
+   font-size: 1rem;
+    }
+  
+  /* Newsletter-sectie */
+  .newsletter-section {
+    margin: 1.25rem auto; 
+    max-width: 25rem; 
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .newsletter-form input {
+    width: 90%; 
+    padding: 0.75rem; 
+    font-size: 0.9rem; 
+    border: 0.0625rem solid var(--border-color); 
+    border-radius: 3.125rem; 
+    text-align: center;
+  }
+  
+  .newsletter-form button {
+    width: 90%; 
+    padding: 0.75rem; 
+    font-size: 0.9rem; 
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3.125rem; 
+    cursor: pointer;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .newsletter-form input:focus {
+    border-color: #333;
+    box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Temperatuur-sectie */
+  .temperature-section {
+    margin: 2.5rem auto; 
+    width: 85%; 
+    padding: 1.25rem; 
+    background-color: var(--tertiary-color); 
+    text-align: left; 
+    box-shadow: 0 0.25rem 0.5rem var(--shadow-color); 
+    border-radius: 0.625rem; 
+  }
+  
+  .temperature-box {
+    max-width: 50rem; 
+    margin: 0 auto; 
+  }
+  
+  .temperature-box h1 {
+    font-size: 5rem; 
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color); 
+    margin: 0;
+  }
+  
+  .temperature-box .primary-text {
+    font-size: 1.2rem; 
+    font-weight: 500;
+    color: var(--dark-text); 
+    margin-top: 0.9375rem; 
+    line-height: 1.6;
+  }
+  
+  .temperature-box .secondary-text {
+    font-size: 1rem; 
+    font-weight: 400;
+    color: #777; 
+    margin-top: 1.25rem; 
+    line-height: 1.8; 
+  }
+  

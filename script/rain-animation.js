@@ -2,8 +2,8 @@
  * @file rain-animation.js
  * @author Fatima El Hilali
  * @description Dit script genereert een regenanimatie met behulp van GSAP. 
- *              Druppels worden willekeurig geplaatst, hebben verschillende snelheden, 
- *              en herhalen hun beweging eindeloos.
+ * Druppels worden willekeurig geplaatst, hebben verschillende snelheden, 
+ * en herhalen hun beweging eindeloos.
  * @see https://greensock.com/docs/ - Officiële documentatie van GSAP.
  */
 

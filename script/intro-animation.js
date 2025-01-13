@@ -1,103 +1,125 @@
-
 /**
  * @file intro-animation.js
  * @author Fatima El Hilali
+ * @description GSAP-gebaseerde animaties voor de introductie van de website. 
+ * Inclusief secties zoals header, video-sectie, forecast, nieuwsbrief en temperatuur.
  * @see https://greensock.com/docs/ - Officiële documentatie van GSAP.
- * @see YouTube Course: "Introductory Animations with GSAP" by [Sheryians Coding School
-]
+ * @see YouTube Course: "Introductory Animations with GSAP" by [Sheryians Coding School]
  */
 
-
 /**
- * Introductie animaties van de website, gemaakt met GSAP.
- * @see https://greensock.com/docs/
+ * Creëer een GSAP-tijdlijn voor alle intro-animaties op de website.
+ * @type {gsap.core.Timeline}
  */
 const tl = gsap.timeline({
     /**
      * Aantal herhalingen van de animatie.
-     * 0 betekent dat de animatie slechts één keer wordt afgespeeld.
-     * @property {number} repeat
+     * @property {number} repeat - 0 betekent dat de animatie slechts één keer wordt afgespeeld.
      */
     repeat: 0,
 });
 
-/**
- * Stel beginwaarden in voor verschillende elementen om ze onzichtbaar te maken
- * en in de juiste startpositie te plaatsen.
- */
-tl.set("header .logo img", { 
-    opacity: 0, 
-    scale: 0.8 
-}); // Logo begint kleiner en onzichtbaar
-tl.set(".main-title", { 
-    opacity: 0, 
-    y: 30 
-}); // Hoofdtekst begint lager en onzichtbaar
-tl.set(".menu-button", { 
-    opacity: 0, 
-    y: 20 
-}); // Menu-knop begint lager en onzichtbaar
-tl.set(".toggle-content-btn", { opacity: 0, y: 0 }); // Toggle-knop is onzichtbaar
-tl.set(".video-section", { opacity: 0, y: 0 }); // Video-sectie begint onzichtbaar
-tl.set("#rain-container", { opacity: 0, y: 0 }); // Regen-container begint onzichtbaar
+// Beginwaarden instellen voor verschillende elementen
+tl.set("header .logo img", { opacity: 0, scale: 0.8 });
+tl.set(".main-title", { opacity: 0, y: 30 });
+tl.set(".menu-button", { opacity: 0, y: 20 });
+tl.set(".toggle-content-btn", { opacity: 0, y: 0 });
+tl.set(".video-section", { opacity: 0, y: 0 });
+tl.set("#rain-container", { opacity: 0, y: 0 });
+tl.set(".forecast-section", { opacity: 0, y: 30 });
+tl.set(".newsletter-section", { opacity: 0, y: 30 });
+tl.set(".temperature-section", { opacity: 0, y: 30 });
 
-/**
- * Logo animatie: het logo wordt zichtbaar en vergroot.
- */
+// Animatie voor het logo
 tl.to("header .logo img", {
-    /**
-     * Logo wordt zichtbaar, krijgt originele grootte en beweegt vloeiend.
-     * @property {number} opacity - Zichtbaarheid van het element.
-     * @property {number} scale - Schaal van het element (1 = 100%).
-     * @property {number} delay - Wacht voordat de animatie start.
-     * @property {number} duration - Duur van de animatie in seconden.
-     * @property {string} ease - Type overgang voor vloeiende bewegingen.
-     */
     opacity: 1,
-    delay: 1,
+    delay: 0.5,
     scale: 1,
-    duration: 1,
+    duration: 0.5,
     stagger: 0.1,
     ease: 'power2.out'
 });
 
-/**
- * Menu-knop animatie: verschijnt na het logo.
- */
+// Animatie voor de menuknop
 tl.to(".menu-button", {
-    opacity: 1, // Wordt zichtbaar
-    y: 0,       // Beweegt naar originele positie
-    duration: 1,
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
     ease: 'power2.out',
-}, "+=0.5"); // Wacht 0.5 seconden na de vorige animatie
+}, "+=0.3");
 
-/**
- * Hoofdtekst animatie: verschijnt na de menu-knop.
- */
+// Animatie voor de hoofdtekst
 tl.to(".main-title", {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.5,
     ease: 'power2.out',
-}, "+=0.5");
+}, "+=0.3");
 
-/**
- * Video-sectie animatie: verschijnt na de hoofdtekst.
- */
+// Animatie voor de video-sectie
 tl.to(".video-section", {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.5,
     ease: "power2.out",
-}, "+=0.5");
+}, "+=0.3");
 
-/**
- * Toggle-content-knop animatie: verschijnt na de video-sectie.
- */
+// Animatie voor de toggle-content knop
 tl.to(".toggle-content-btn", {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.5,
     ease: "power2.out",
-}, "+=0.5");
+}, "+=0.3");
 
+// Animatie voor de weersvoorspelling sectie
+tl.to(".forecast-section", {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+}, "+=0.3");
+
+// Animatie voor de nieuwsbrief sectie
+tl.to(".newsletter-section", {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+}, "+=0.3");
+
+// Animatie voor de temperatuur sectie
+tl.to(".temperature-section", {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+}, "+=0.3");
+
+/**
+ * ScrollTrigger animatie voor de video-sectie.
+ * Zoomt de video uit wanneer er naar beneden gescrolld wordt.
+ */
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".video-section video", {
+    /**
+     * Zoomt de video naar 80% van de originele grootte.
+     * @property {number} scale - Schaal van het video-element.
+     */
+    scale: 0.8,
+    scrollTrigger: {
+        /**
+         * Element dat de scroll-animatie triggert.
+         * @property {string} trigger - CSS-selector van het element.
+         * @property {string} start - Startpunt van de animatie bij scrollen.
+         * @property {string} end - Eindpunt van de animatie bij scrollen.
+         * @property {boolean} scrub - Zorgt voor een vloeiende overgang tijdens scrollen.
+         */
+        trigger: ".video-section",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+    },
+    ease: "power1.inOut", // Zorgt voor een vloeiende overgang
+});

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DEPT®</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -47,15 +49,94 @@
       </video>
     </section>
 
-
+    <section class="forecast-section">
+      <h2 class="section-title">Upcoming 5 days</h2>
+      <ul class="forecast-list">
+        <li class="forecast-item">
+          <span class="day">Tuesday 25th Feb</span>
+          <div class="details">
+            <span class="icon sun"></span>
+            <span class="temp">19° / 22°</span>
+            <span class="icon water"></span>
+            <span class="rain">0.5mm</span>
+            <span class="wind">N/W</span>
+            <span class="arrow">▼</span>
+          </div>
+        </li>
+        <li class="forecast-item">
+          <span class="day">Wednesday 26th Feb</span>
+          <div class="details">
+            <span class="icon sun"></span>
+            <span class="temp">19° / 22°</span>
+            <span class="icon water"></span>
+            <span class="rain">0.5mm</span>
+            <span class="wind">N/W</span>
+            <span class="arrow">▼</span>
+          </div>
+        </li>
+        <li class="forecast-item">
+          <span class="day">Thursday 27th Feb</span>
+          <div class="details">
+            <span class="icon sun"></span>
+            <span class="temp">19° / 22°</span>
+            <span class="rain">0.5mm</span>
+            <span class="wind">N/W</span>
+            <span class="arrow">▼</span>
+          </div>
+        </li>
+        <li class="forecast-item">
+          <span class="day">Friday 28th Feb</span>
+          <div class="details">
+            <span class="icon sun"></span>
+            <span class="temp">19° / 22°</span>
+            <span class="icon water"></span>
+            <span class="rain">0.5mm</span>
+            <span class="wind">N/W</span>
+            <span class="arrow">▼</span>
+          </div>
+        </li>
+        <li class="forecast-item">
+          <span class="day">Saturday 29th Feb</span>
+          <div class="details">
+            <span class="icon sun"></span>
+            <span class="temp">19° / 22°</span>
+            <span class="icon water"></span>
+            <span class="rain">0.5mm</span>
+            <span class="wind">N/W</span>
+            <span class="arrow">▼</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+    
+    
+    <section class="newsletter-section">
+      <h2 class="temperature-title">Want to get a daily forecast?</h2>
+      <form class="newsletter-form">
+        <input type="email" id="email" name="email" placeholder="Enter your e-mail address" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    
+    <section class="temperature-section">
+      <div class="temperature-box">
+        <h1>24°</h1>
+        <p class="primary-text">It's currently around ~24° in the<br> Netherlands</p>
+        <p class="secondary-text">
+          Very sunny, and very unusual for the <br>
+          Netherlands. But we should enjoy it as <br>
+          long as it lasts.
+        </p>
+      </div>
+    </section>
     
   </main>
-
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
  <script src="script/rain-animation.js"></script>
  <script src="script/content-toggle.js"></script>
  <script src="script/intro-animation.js"></script>
+ <script src="script/ScrollTrigger.js"></script>
 
 
 </body>

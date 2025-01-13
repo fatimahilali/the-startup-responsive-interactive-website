@@ -2,7 +2,7 @@
  * @file content-toggle.js
  * @author Fatima El Hilali
  * @description Dit script beheert de functionaliteit en animaties voor het tonen en verbergen 
- *              van extra content met een "Read More" en "Read Less" knop. Animaties worden uitgevoerd met GSAP.
+ * van extra content met een "Read More" en "Read Less" knop. Animaties worden uitgevoerd met GSAP.
  * @see https://greensock.com/docs/ - Officiële GSAP documentatie.
  * @see YouTube Course: "Introductory Animations with GSAP" by [Sheryians Coding School
  */
