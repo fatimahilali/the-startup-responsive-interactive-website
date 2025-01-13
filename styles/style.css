@@ -206,9 +206,10 @@
     display: block;
     margin: 1.25rem auto; 
     text-align: center;
-    border: 0.0625rem solid var(--border-color); 
-    border-radius: 3.125rem; 
-  }
+    border: 0.0625rem solid black; 
+    border-radius: 3.125rem;
+}
+
   
   .toggle-content-btn:hover {
     background-color: var(--secondary-color);
