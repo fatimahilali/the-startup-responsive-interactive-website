@@ -96,30 +96,7 @@ tl.to(".temperature-section", {
     ease: "power2.out",
 }, "+=0.3");
 
-/**
- * ScrollTrigger animatie voor de video-sectie.
- * Zoomt de video uit wanneer er naar beneden gescrolld wordt.
- */
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".video-section video", {
-    /**
-     * Zoomt de video naar 80% van de originele grootte.
-     * @property {number} scale - Schaal van het video-element.
-     */
-    scale: 0.8,
-    scrollTrigger: {
-        /**
-         * Element dat de scroll-animatie triggert.
-         * @property {string} trigger - CSS-selector van het element.
-         * @property {string} start - Startpunt van de animatie bij scrollen.
-         * @property {string} end - Eindpunt van de animatie bij scrollen.
-         * @property {boolean} scrub - Zorgt voor een vloeiende overgang tijdens scrollen.
-         */
-        trigger: ".video-section",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-    },
-    ease: "power1.inOut", // Zorgt voor een vloeiende overgang
-});
+
+
+

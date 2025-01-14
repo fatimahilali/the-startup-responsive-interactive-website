@@ -15,7 +15,6 @@
       <img src="https://www.deptagency.com/wp-content/uploads/2024/09/dept-logo.svg" alt="DEPT® logo">
     </div>
     <button class="menu-button">Menu</button>
-    <!-- Regencontainer indien nodig -->
     <div id="rain-container"></div>
   </header>
   
@@ -130,15 +129,33 @@
         </p>
       </div>
     </section>
+
+    <section class="call-to-action-section">
+      <div class="marquee-container">
+        <div class="line left-line"></div> <!-- Linker lijn -->
+        <div class="marquee">
+          <div class="marquee_text">Explore Activities &nbsp; • &nbsp; Discover More &nbsp; •</div>
+          <div class="marquee_blur"></div>
+        </div>
+        <div class="line right-line"></div> <!-- Rechter lijn -->
+      </div>
+      
+      <a class="cta-link" onclick="redirectToTemperatureInput()">
+        Click Here to Explore <span class="arrow-icon"></span>
+      </a>
+    </section>
     
+    
+    
+
   </main>
+  
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
  <script src="script/rain-animation.js"></script>
  <script src="script/content-toggle.js"></script>
  <script src="script/intro-animation.js"></script>
  <script src="script/ScrollTrigger.js"></script>
-
-
+<script src="script/activities.js"></script>
 </body>
 </html>
