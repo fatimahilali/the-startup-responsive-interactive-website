@@ -651,7 +651,7 @@ body {
   font-size: 1rem; 
   font-weight: 400; 
   text-transform: uppercase;
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   cursor: pointer;
 }
@@ -662,24 +662,25 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Styling voor het locatie-menu */
 .location-menu {
   display: none; 
   list-style: none;
   margin: 0;
   padding: 0;
-  background: var(  --tertiary-color);
   border: 0.1rem solid #ccc;
   border-radius: 0.3rem;
   position: absolute;
-  top: 100%;
+  top: auto; /* Reset eventuele top-positionering */
+  bottom: calc(40% - 2rem); /* Verplaats menu meer naar beneden */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Houd het menu horizontaal gecentreerd */
   width: 12.5rem;
   text-align: left;
+  background: #fff; 
   box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
+
 
 .location-menu li {
   padding: 0.5rem 1rem;
