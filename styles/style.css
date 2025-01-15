@@ -421,7 +421,7 @@
   padding: 3rem 1rem; /* Iets meer padding boven en onder */
   background: white;
   overflow: hidden;
-  margin: 3rem 1.25rem 0 1.25rem;
+  margin: 3rem 1.50rem 0 1.50rem;
 
   
 
@@ -461,7 +461,7 @@
   white-space: nowrap;
   font-size: 1.5rem;
   color:var(--primary-color);
-  animation: marquee-move 20s linear infinite;
+  animation: marquee-move 30s linear infinite;
   font-family: 'Lato', Arial, sans-serif;
 }
 
