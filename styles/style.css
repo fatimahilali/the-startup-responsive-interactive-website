@@ -1,296 +1,301 @@
-
 /* Algemene code voor mobiel first version */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Verwijder horizontale scroll */
-    font-family: 'Lato', Arial, sans-serif;
-  }
-  
-  /* Variabelen in de body voor herbruikbare waarden */
-  body {
-    --primary-color: #000;
-    --secondary-color: #444;
-    --tertiary-color: #f3f3ff;
-    --accent-color: #4B00FF;
-    --text-color: #333;
-    --light-text: #666;
-    --dark-text: #555;
-    --border-color: #060606;
-    --highlight-color: #0099ff;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --font-size-base: 1rem;
-    --font-size-large: 3rem;
-    --font-weight-bold: 700;
-    --font-weight-normal: 400;
-  }
-  
-  /* Header */
-  .header {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* Logo links, ruimte in het midden, menu rechts */
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  .logo img {
-    height: 1.6875rem; 
-    display: block;
-  }
-  
-  /* Menu-knop */
-  .menu-button {
-    background: none;
-    border: none;
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-normal);
-    color: var(--text-color);
-    cursor: pointer;
-    justify-self: end; 
-    
-  }
-  
-  /* Regencontainer */
-  #rain-container {
-    position: absolute;
-    top: 15%; 
-    left: 0;
-    width: 100vw; 
-    height: 55%; 
-    pointer-events: none;
-    overflow: hidden;
-  }
-  
-  /* Regenanimatie */
-  .droplet {
-    position: absolute;
-    top: 10%; 
-    left: 0;
-    background-color: rgb(232, 230, 230);
-    opacity: 0.8;
-    height: 2.5rem; 
-    width: 0.125rem; 
-    border-radius: 0.125rem; 
-  }
-  
-  /* Main content */
-  .main-content {
-    display: grid;
-    justify-items: center;
-    align-items: start; 
-    text-align: center;
-    padding-top: 1.25rem;
-    row-gap: 0.75rem; 
-    width: 100%; 
-  }
-  
-  .main-title {
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-bold);
-    line-height: 0.9;
-    margin: 0 auto;
-    text-transform: uppercase;
-    padding: 1.25rem; 
-    overflow-wrap: break-word;
-  }
-  
-  .main-title span {
-    font-style: italic;
-    font-weight: 100;
-    display: block;
-    margin-top: 0.375rem; 
-    font-size: var(--font-size-large);
-    line-height: 0.6;
-    overflow-wrap: break-word;
-  }
-  
-
-
-   /* Wrapper voor de hele pagina */
-   .page-wrapper {
-    position: relative;
-    z-index: 1;
-    width: 100%; 
-    padding: 1.25rem; 
-  }
-  
-  /* Semi-transparante blur-overlay */
-  .blur-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(0.625rem);
-    z-index: 5;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-  }
-  
-  /* Content-container */
-  .content-container {
-    position: relative;
-    z-index: 10;
-    margin: 0 auto; 
-    text-align: left;
-    overflow-wrap: break-word;
-  }
-  
-  .extra-content {
-    background-color: var(--accent-color);
-    padding: 1.875rem; 
-    border-radius: 0.5rem; 
-    color: white;
-    overflow-wrap: break-word;
-  }
-  
-  .extra-content h2 {
-    font-size: 2.5rem; 
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 1.875rem; 
-    margin-top: 0.625rem; 
-    line-height: 1.3;
-    word-break: break-word;
-    color: white;
-  }
-  
-  .extra-content p {
-    font-size: var(--font-size-base); 
-    line-height: 1.8;
-    margin-bottom: 0.9375rem; 
-    word-wrap: break-word;
-  }
-  
-  .extra-content p:first-of-type {
-    margin-bottom: 2.5rem; 
-  }
-  
-  .toggle-content-btn {
-    font-size: var(--font-size-base);
-    color: #121212;
-    background-color: #FFFFFF;
-    padding: 0.75rem 1.875rem; 
-    cursor: pointer;
-    text-transform: uppercase;
-    display: block;
-    margin: 1.25rem auto; 
-    text-align: center;
-    border: 0.0625rem solid black; 
-    border-radius: 3.125rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  
-  .toggle-content-btn:hover {
-    background-color: var(--secondary-color);
-    color: #FFFFFF;
-  }
-  
-  .read-less {
-    font-size: var(--font-size-base);
-    color: white;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  .read-less:hover {
-    text-decoration: none;
-    color: #cccccc;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Verwijder horizontale scroll */
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+/* Variabelen in de body voor herbruikbare waarden */
+body {
+  --primary-color: #000;
+  --secondary-color: #444;
+  --tertiary-color: #f3f3ff;
+  --accent-color: #4B00FF;
+  --text-color: #333;
+  --light-text: #666;
+  --dark-text: #555;
+  --border-color: #060606;
+  --highlight-color: #0099ff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-size-base: 1rem;
+  --font-size-large: 3rem;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  /* Logo links, ruimte in het midden, menu rechts */
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  height: 1.6875rem;
+  display: block;
+}
+
+/* Menu-knop */
+.menu-button {
+  background: none;
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color);
+  cursor: pointer;
+  justify-self: end;
+
+}
+
+/* Regencontainer */
+#rain-container {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100vw;
+  height: 55%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Regenanimatie */
+.droplet {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background-color: rgb(232, 230, 230);
+  opacity: 0.8;
+  height: 2.5rem;
+  width: 0.125rem;
+  border-radius: 0.125rem;
+}
+
+/* Main content */
+.main-content {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+  padding-top: 1.25rem;
+  row-gap: 0.75rem;
+  width: 100%;
+}
+
+.main-title {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: 0.9;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 1.25rem;
+  overflow-wrap: break-word;
+}
+
+.main-title span {
+  font-style: italic;
+  font-weight: 100;
+  display: block;
+  margin-top: 0.375rem;
+  font-size: var(--font-size-large);
+  line-height: 0.6;
+  overflow-wrap: break-word;
+}
 
 
 
-  .read-less:hover {
-    text-decoration: none;
-    color: #cccccc;
-  }
-  /* Video Background Sectie */
-  .video-section {
-    position: relative;
-    width: 90%; 
-    height: 12.5rem; 
-    overflow: hidden;
-    z-index: 1; 
-    margin: 1.5625rem auto; 
-  }
-  
-  .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1;
-    pointer-events: none;
-  }
-  
- 
+/* Wrapper voor de hele pagina */
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 1.25rem;
+}
+
+/* Semi-transparante blur-overlay */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.625rem);
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Content-container */
+.content-container {
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.extra-content {
+  background-color: var(--accent-color);
+  padding: 1.875rem;
+  border-radius: 0.5rem;
+  color: white;
+  overflow-wrap: break-word;
+}
+
+.extra-content h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.875rem;
+  margin-top: 0.625rem;
+  line-height: 1.3;
+  word-break: break-word;
+  color: white;
+}
+
+.extra-content p {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  margin-bottom: 0.9375rem;
+  word-wrap: break-word;
+}
+
+.extra-content p:first-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.toggle-content-btn {
+  font-size: var(--font-size-base);
+  color: #121212;
+  background-color: #FFFFFF;
+  padding: 0.75rem 1.875rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  border: 0.0625rem solid black;
+  border-radius: 3.125rem;
+}
 
 
-  /* Forecast-sectie */
+.toggle-content-btn:hover {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+}
+
+.read-less {
+  font-size: var(--font-size-base);
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.read-less:hover {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+
+
+.read-less:hover {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+/* Video Background Sectie */
+.video-section {
+  position: relative;
+  width: 90%;
+  height: 12.5rem;
+  overflow: hidden;
+  z-index: 1;
+  margin: 1.5625rem auto;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+
+/* Forecast-sectie */
 .forecast-section {
   margin: 1.5rem auto;
-  width: 85%; 
+  width: 85%;
   padding: 1.25rem;
-  text-align: left; 
-  border-radius: 0.625rem; 
+  text-align: left;
+  border-radius: 0.625rem;
 }
 
 .forecast-list {
-  list-style: none; 
+  list-style: none;
 }
 
 
 .section-title {
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  color: var(--text-color); 
-  margin-bottom: 1.5rem; 
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
 }
 
 
 .section-title .highlight {
-  color: var(--accent-color); 
-  font-weight: bold; 
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 
 .details {
-  display: grid; 
-  grid-template-columns: repeat(6, auto); /* Verdeel in zes gelijke kolommen */
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  /* Verdeel in zes gelijke kolommen */
   gap: 0.5rem;
-  align-items: center; 
+  align-items: center;
 }
 
 
 .forecast-item {
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border-color); 
+  border-bottom: 1px solid var(--border-color);
 }
 
 .forecast-item .day {
   font-size: 1rem;
   font-weight: var(--font-weight-normal);
-  color: var(--text-color); 
-  margin-bottom: 0; 
+  color: var(--text-color);
+  margin-bottom: 0;
 }
 
 .forecast-item:last-child {
-  border-bottom: none; /* Verwijder scheiding bij het laatste item */
+  border-bottom: none;
+  /* Verwijder scheiding bij het laatste item */
 }
 
 
@@ -298,154 +303,165 @@
 
 /* Iconen stijl */
 .icon {
-  width: 1.5rem; 
+  width: 1.5rem;
   height: 1.5rem;
   display: inline-block;
 }
 
 .icon.sun {
-  background: radial-gradient(circle, #f90 50%, transparent 51%); 
-  border-radius: 50%; 
+  background: radial-gradient(circle, #f90 50%, transparent 51%);
+  border-radius: 50%;
 }
 
 .icon.water::before {
-  content: '💧'; 
-  font-size: 1.2rem; 
+  content: '💧';
+  font-size: 1.2rem;
   position: relative;
 }
 
-  /* Newsletter-sectie */
-  .newsletter-section {
-    margin: 1.25rem auto; 
-    text-align: center;
-  }
-  
-  .newsletter-form {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  .newsletter-form input {
-    width: 90%; 
-    padding: 0.75rem; 
-    font-size: 0.9rem; 
-    border: 0.0625rem solid var(--border-color); 
-    border-radius: 3.125rem; 
-    text-align: center;
-  }
-  
-  .newsletter-form button {
-    width: 90%; 
-    padding: 0.75rem; 
-    font-size: 0.9rem; 
-    color: #fff;
-    background: linear-gradient(90deg, var(--primary-color), #333, var(--primary-color)); 
-    background-size: 200%; /* Maakt de animatie vloeiend */
-    border: none;
-    border-radius: 3.125rem; 
-    cursor: pointer;
-    animation: gradient-black 3s ease infinite; 
-    box-shadow: 
-        0 0.25rem 0.375rem var(--accent-color), 
-        0 0.5rem 1rem rgba(255, 255, 255, 0.3); 
+/* Newsletter-sectie */
+.newsletter-section {
+  margin: 1.25rem auto;
+  text-align: center;
+}
+
+.newsletter-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.newsletter-form input {
+  width: 90%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 3.125rem;
+  text-align: center;
+}
+
+.newsletter-form button {
+  width: 90%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary-color), #333, var(--primary-color));
+  background-size: 200%;
+  /* Maakt de animatie vloeiend */
+  border: none;
+  border-radius: 3.125rem;
+  cursor: pointer;
+  animation: gradient-black 3s ease infinite;
+  box-shadow:
+    0 0.25rem 0.375rem var(--accent-color),
+    0 0.5rem 1rem rgba(255, 255, 255, 0.3);
 }
 
 /* Animatie voor de achtergrond */
 @keyframes gradient-black {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-  
-  
-  .newsletter-form button:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .newsletter-form input:focus {
-    border-color:var(--border-color);
-    box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Temperatuur-sectie */
-  .temperature-section {
-    margin: 2.5rem auto; 
-    width: 85%; 
-    padding: 1.25rem; 
-    background-color: var(--tertiary-color); 
-    text-align: left; 
-    box-shadow: 0 0.25rem 0.5rem var(--shadow-color); 
-    border-radius: 0.625rem; 
-  }
-  
 
-  .primary-text .highlight {
-    color: var(--accent-color);
-    font-weight: bold; 
-  }
 
-  .temperature-box {
-    margin: 0 auto; 
-  }
-  
-  .temperature-box h1 {
-    font-size: 5rem; 
-    font-weight: var(--font-weight-bold);
-    color: var(--text-color); 
-    margin: 0;
-  }
-  
-  .temperature-box h1 .degree-symbol {
-    color: var(--accent-color); /* Geef de graden de accentkleur */
-    font-size: 1.2em; /* Optioneel: maak het symbool iets groter */
-    vertical-align: top; /* Optioneel: zorg voor een mooie uitlijning */
-  }
-  
-  
-  .temperature-box .primary-text {
-    font-size: 1.2rem; 
-    font-weight: 500;
-    color: var(--dark-text); 
-    margin-top: 0.9375rem; 
-    line-height: 1.6;
-  }
-  
-  
-  .temperature-box .secondary-text {
-    font-size: 1rem; 
-    font-weight: 400;
-    color: #777; 
-    margin-top: 1.25rem; 
-    line-height: 1.8; 
-  }
-    
-  .temperature-title {
-    font-size: 1rem;
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    color: var(    --primary-color);
-    margin-bottom: 1.5rem;
-    margin-right: 70px;
-  
-  }
+.newsletter-form button:hover {
+  background-color: var(--secondary-color);
+}
+
+.newsletter-form input:focus {
+  border-color: var(--border-color);
+  box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.2);
+}
+
+/* Temperatuur-sectie */
+.temperature-section {
+  margin: 2.5rem auto;
+  width: 85%;
+  padding: 1.25rem;
+  background-color: var(--tertiary-color);
+  text-align: left;
+  box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
+  border-radius: 0.625rem;
+}
+
+
+.primary-text .highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.temperature-box {
+  margin: 0 auto;
+}
+
+.temperature-box h1 {
+  font-size: 5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.temperature-box h1 .degree-symbol {
+  color: var(--accent-color);
+  /* Geef de graden de accentkleur */
+  font-size: 1.2em;
+  /* Optioneel: maak het symbool iets groter */
+  vertical-align: top;
+  /* Optioneel: zorg voor een mooie uitlijning */
+}
+
+
+.temperature-box .primary-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark-text);
+  margin-top: 0.9375rem;
+  line-height: 1.6;
+}
+
+
+.temperature-box .secondary-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
+  margin-top: 1.25rem;
+  line-height: 1.8;
+}
+
+.temperature-title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  margin-right: 70px;
+
+}
+
 .temperature-box h1 .highlight {
-  color: var(--accent-color); /* Gebruik de accentkleur voor het getal */
-  font-weight: bold; /* Optioneel: benadruk het getal */
+  color: var(--accent-color);
+  /* Gebruik de accentkleur voor het getal */
+  font-weight: bold;
+  /* Optioneel: benadruk het getal */
 }
 
 
-  /* Algemene styling van de call-to-action sectie */
+/* Algemene styling van de call-to-action sectie */
 .call-to-action-section {
   text-align: center;
-  margin-top: 3rem; /* Vergroot de marge bovenaan */
-  padding: 3rem 1rem; /* Iets meer padding boven en onder */
+  margin-top: 3rem;
+  /* Vergroot de marge bovenaan */
+  padding: 3rem 1rem;
+  /* Iets meer padding boven en onder */
   background: white;
   overflow: hidden;
   margin: 3rem 1.50rem 0 1.50rem;
@@ -455,7 +471,8 @@
 /* Container voor de marquee en lijnen */
 .marquee-container {
   display: grid;
-  grid-template-columns: auto 1fr auto; /* Lijnen aan beide zijden en marquee in het midden */
+  grid-template-columns: auto 1fr auto;
+  /* Lijnen aan beide zijden en marquee in het midden */
   align-items: center;
   position: relative;
   height: 4rem;
@@ -464,8 +481,8 @@
 
 /* Verticale lijnen */
 .line {
-  inline-size: 0.2rem; 
-  block-size: 100%; 
+  inline-size: 0.2rem;
+  block-size: 100%;
   background: linear-gradient(to top, var(--dark-text), transparent);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
@@ -478,13 +495,14 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  inline-size: 80%; /* Breedte van de marquee */
+  inline-size: 80%;
+  /* Breedte van de marquee */
 }
 
 .marquee_text {
   white-space: nowrap;
   font-size: 1.5rem;
-  color:var(--primary-color);
+  color: var(--primary-color);
   animation: marquee-move 22s linear infinite;
   font-family: 'Lato', Arial, sans-serif;
 }
@@ -494,6 +512,7 @@
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -517,7 +536,7 @@
 
 .text {
   font-size: 1rem;
-  color:var(--secondary-color);
+  color: var(--secondary-color);
   line-height: 1.6;
   margin-bottom: 3em;
 }
@@ -530,7 +549,7 @@
   font-family: 'Lato', Arial, sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  color:var(--primary-color);
+  color: var(--primary-color);
   text-decoration: none;
   cursor: pointer;
   padding: 0.8em 1.5em;
@@ -542,15 +561,15 @@
 /* Pijltje animatie */
 .arrow-icon {
   display: inline-block;
-  inline-size: 1em; 
-  block-size: 1em; 
-  border-inline-end: 0.2em solid var(--accent-color); 
+  inline-size: 1em;
+  block-size: 1em;
+  border-inline-end: 0.2em solid var(--accent-color);
   border-block-start: 0.2em solid var(--accent-color);
   transform: rotate(45deg);
   transition: all 0.3s ease;
-  position: relative; /*  voor betere controle */
-  margin-inline-start: 0.5em; 
-  margin-top: -1.0625rem; 
-  left: 5.625rem; 
+  position: relative;
+  /*  voor betere controle */
+  margin-inline-start: 0.5em;
+  margin-top: -1.0625rem;
+  left: 5.625rem;
 }
-
