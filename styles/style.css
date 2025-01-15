@@ -10,10 +10,8 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  /* Verwijder horizontale scroll */
+
+  overflow-x: hidden;/* Verwijder horizontale scroll */
   font-family: 'Lato', Arial, sans-serif;
 }
 
@@ -270,10 +268,11 @@ body {
 }
 
 
+
+
 .details {
   display: grid;
-  grid-template-columns: repeat(6, auto);
-  /* Verdeel in zes gelijke kolommen */
+  grid-template-columns: repeat(6, auto); /* Verdeel in zes gelijke kolommen */
   gap: 0.5rem;
   align-items: center;
 }
@@ -297,8 +296,6 @@ body {
   border-bottom: none;
   /* Verwijder scheiding bij het laatste item */
 }
-
-
 
 
 /* Iconen stijl */
@@ -345,8 +342,7 @@ body {
   font-size: 0.9rem;
   color: #fff;
   background: linear-gradient(90deg, var(--primary-color), #333, var(--primary-color));
-  background-size: 200%;
-  /* Maakt de animatie vloeiend */
+  background-size: 200%;/* Maakt de animatie vloeiend */
   border: none;
   border-radius: 3.125rem;
   cursor: pointer;
@@ -384,9 +380,9 @@ body {
 
 /* Temperatuur-sectie */
 .temperature-section {
-  margin: 2.5rem auto;
+  margin: 7rem auto; /* Increased the top margin to push the section downward */
   width: 85%;
-  padding: 1.25rem;
+  padding: 2.25rem;
   background-color: var(--tertiary-color);
   text-align: left;
   box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
@@ -412,11 +408,8 @@ body {
 
 .temperature-box h1 .degree-symbol {
   color: var(--accent-color);
-  /* Geef de graden de accentkleur */
   font-size: 1.2em;
-  /* Optioneel: maak het symbool iets groter */
   vertical-align: top;
-  /* Optioneel: zorg voor een mooie uitlijning */
 }
 
 
@@ -449,9 +442,7 @@ body {
 
 .temperature-box h1 .highlight {
   color: var(--accent-color);
-  /* Gebruik de accentkleur voor het getal */
   font-weight: bold;
-  /* Optioneel: benadruk het getal */
 }
 
 
@@ -459,9 +450,7 @@ body {
 .call-to-action-section {
   text-align: center;
   margin-top: 3rem;
-  /* Vergroot de marge bovenaan */
   padding: 3rem 1rem;
-  /* Iets meer padding boven en onder */
   background: white;
   overflow: hidden;
   margin: 3rem 1.50rem 0 1.50rem;
@@ -471,8 +460,7 @@ body {
 /* Container voor de marquee en lijnen */
 .marquee-container {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  /* Lijnen aan beide zijden en marquee in het midden */
+  grid-template-columns: auto 1fr auto;/* Lijnen aan beide zijden en marquee in het midden */
   align-items: center;
   position: relative;
   height: 4rem;
@@ -496,7 +484,6 @@ body {
   align-items: center;
   justify-items: center;
   inline-size: 80%;
-  /* Breedte van de marquee */
 }
 
 .marquee_text {
@@ -556,20 +543,154 @@ body {
   background: transparent;
   overflow: hidden;
   position: relative;
+  border: 0.0625rem solid black;
+  border-radius: 3.125rem;
+  max-width: 210px;
+  margin-left:70px;
 }
 
-/* Pijltje animatie */
-.arrow-icon {
-  display: inline-block;
-  inline-size: 1em;
-  block-size: 1em;
-  border-inline-end: 0.2em solid var(--accent-color);
-  border-block-start: 0.2em solid var(--accent-color);
-  transform: rotate(45deg);
-  transition: all 0.3s ease;
-  position: relative;
-  /*  voor betere controle */
-  margin-inline-start: 0.5em;
-  margin-top: -1.0625rem;
-  left: 5.625rem;
+
+
+
+/* Algemene styling voor de mobiele footer */
+.mobile-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(  --tertiary-colo);
+  color: var(--text-color);
+  margin: 4rem auto 0 auto; /* Voeg 2rem ruimte boven de footer toe */
+
 }
+
+/* Styling voor de topsectie: "SUBSCRIBE TO OUR NEWSLETTER" en "GET IN TOUCH WITH US" */
+.footer-section:first-child {
+  border-top: 0.1rem solid rgb(103, 100, 100);
+  padding-bottom: 2rem;
+}
+
+.footer-item {
+  font-size: 1rem; 
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid rgb(103, 100, 100); 
+  margin: 0;
+}
+
+/* Styling voor social media links */
+.social-links {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); /* Drie gelijke kolommen */
+  gap: 2rem; 
+  text-align: center; 
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid rgb(103, 100, 100); 
+}
+
+.social-links .footer-item {
+  border-bottom: none; 
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling voor de "ABOUT"-sectie */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start; 
+  gap: 2rem; 
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 0; 
+}
+
+/* Styling voor de tekst in de "ABOUT"-sectie */
+.about-section .footer-item {
+  padding: 0.3rem;
+  border-bottom: none;
+  margin-left: 2rem;
+}
+
+/* Styling voor het certificeringslogo */
+.about-section .certified-logo {
+  justify-self: end; 
+  padding-right: 2rem; 
+}
+
+.about-section .certified-logo img {
+  width: 3rem; 
+  height: auto;
+  display: block; 
+  margin-top: 0; 
+}
+
+/* Extra voor consistentie */
+.footer-section {
+  margin: 0 auto;
+}
+
+/* Styling voor de logosectie */
+.logo-section {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative; 
+}
+
+.dept-logo {
+  width: 22rem; 
+  margin: 0 auto;
+  display: block;
+}
+
+/* Styling voor de locatie-toggle */
+.location-toggle {
+  font-size: 1rem; 
+  font-weight: 400; 
+  text-transform: uppercase;
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 0.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Styling voor het locatie-menu */
+.location-menu {
+  display: none; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(  --tertiary-color);
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12.5rem;
+  text-align: left;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.location-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.location-menu li:hover {
+  background-color: var(  --tertiary-color);
+}
+
+
+
+
+

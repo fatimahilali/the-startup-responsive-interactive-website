@@ -150,7 +150,7 @@
       <div class="marquee-container">
         <div class="line left-line"></div> <!-- Linker lijn -->
         <div class="marquee">
-          <div class="marquee_text"> Explore Activities &nbsp; • &nbsp; Discover More &nbsp; • &nbsp; Enter Your
+          <div class="marquee_text"> Explore Activities &nbsp; • &nbsp; Discover More &nbsp; • &nbsp; Enter The
             Temperature to Find the Perfect Activity
             •</div>
           <div class="marquee_blur"></div>
@@ -158,15 +158,61 @@
         <div class="line right-line"></div> <!-- Rechter lijn -->
       </div>
 
-      <a class="cta-link" onclick="redirectToTemperatureInput()">
-        Click Here to Explore <span class="arrow-icon"></span>
+      <a class="cta-link" onclick="redirectToTemperatureInput()"> Click Here to Explore 
       </a>
     </section>
 
-
-
-
   </main>
+
+  
+<!-- HTML -->
+<footer class="mobile-footer">
+  <!-- Top Section -->
+  <div class="footer-section">
+    <div class="footer-item">SUBSCRIBE TO OUR NEWSLETTER</div>
+    <div class="footer-item">GET IN TOUCH WITH US</div>
+    <div class="social-links">
+      <div class="footer-item">INSTAGRAM</div>
+      <div class="footer-item">LINKEDIN</div>
+      <div class="footer-item">TIKTOK</div>
+    </div>
+  </div>
+</footer>
+
+  <!-- About Section -->
+  <div class="footer-section about-section">
+    <div>
+      <div class="footer-item">ABOUT</div>
+      <div class="footer-item">GOOD COMPANY</div>
+      <div class="footer-item">CAREERS</div>
+    </div>
+    <div class="certified-logo">
+      <img class="block-footer-v2__bcorp-logo" src="https://www.deptagency.com/wp-content/uploads/2024/09/dept-bcorp-logo.svg" alt="Certified B Corporation">
+    </div>
+  </div>
+  
+  
+  
+  <!-- Logo Section -->
+  <div class="footer-section logo-section">
+    <img class="dept-logo" src="https://www.deptagency.com/wp-content/uploads/2024/09/dept-logo.svg" alt="DEPT® logo">
+    <div class="location-toggle" onclick="toggleLocationMenu()">CHANGE LOCATION <span class="arrow">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 7L5 3L1 7" stroke="currentColor" stroke-linecap="square"></path>
+      </svg>
+    </span></div>
+
+    <ul class="location-menu">
+      <li>GLOBAL (EN) 🌐</li>
+      <li>DACH (DE)</li>
+      <li>DENMARK (EN)</li>
+      <li>THE NETHERLANDS (EN)</li>
+      <li>UK & IRELAND (EN)</li>
+      <li>ASIA-PACIFIC (EN)</li>
+      <li>LATIN AMERICA (ES)</li>
+    </ul>
+  </div>
+  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -175,6 +221,7 @@
   <script src="script/intro-animation.js"></script>
   <script src="script/ScrollTrigger.js"></script>
   <script src="script/activities.js"></script>
+  <script src="/script/footer.js"></script>
 </body>
 
 </html>
