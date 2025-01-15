@@ -261,6 +261,12 @@
 }
 
 
+.section-title .highlight {
+  color: var(--accent-color); 
+  font-weight: bold; 
+}
+
+
 .details {
   display: grid; 
   grid-template-columns: repeat(6, auto); /* Verdeel in zes gelijke kolommen */
@@ -339,20 +345,24 @@
     border-radius: 3.125rem; 
     cursor: pointer;
     animation: gradient-black 3s ease infinite; 
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); 
-  }
+    box-shadow: 
+        0 0.25rem 0.375rem var(--accent-color), 
+        0 0.5rem 1rem rgba(255, 255, 255, 0.3); 
+}
 
-  @keyframes gradient-black {
+/* Animatie voor de achtergrond */
+@keyframes gradient-black {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
+
   
   
   .newsletter-form button:hover {
@@ -375,6 +385,12 @@
     border-radius: 0.625rem; 
   }
   
+
+  .primary-text .highlight {
+    color: var(--accent-color);
+    font-weight: bold; 
+  }
+
   .temperature-box {
     margin: 0 auto; 
   }
@@ -386,6 +402,13 @@
     margin: 0;
   }
   
+  .temperature-box h1 .degree-symbol {
+    color: var(--accent-color); /* Geef de graden de accentkleur */
+    font-size: 1.2em; /* Optioneel: maak het symbool iets groter */
+    vertical-align: top; /* Optioneel: zorg voor een mooie uitlijning */
+  }
+  
+  
   .temperature-box .primary-text {
     font-size: 1.2rem; 
     font-weight: 500;
@@ -393,6 +416,7 @@
     margin-top: 0.9375rem; 
     line-height: 1.6;
   }
+  
   
   .temperature-box .secondary-text {
     font-size: 1rem; 
@@ -411,7 +435,10 @@
     margin-right: 70px;
   
   }
-
+.temperature-box h1 .highlight {
+  color: var(--accent-color); /* Gebruik de accentkleur voor het getal */
+  font-weight: bold; /* Optioneel: benadruk het getal */
+}
 
 
   /* Algemene styling van de call-to-action sectie */
@@ -422,9 +449,6 @@
   background: white;
   overflow: hidden;
   margin: 3rem 1.50rem 0 1.50rem;
-
-  
-
 }
 
 
@@ -442,7 +466,7 @@
 .line {
   inline-size: 0.2rem; 
   block-size: 100%; 
-  background: linear-gradient(to bottom, var(--accent-color), transparent);
+  background: linear-gradient(to top, var(--dark-text), transparent);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
@@ -461,7 +485,7 @@
   white-space: nowrap;
   font-size: 1.5rem;
   color:var(--primary-color);
-  animation: marquee-move 30s linear infinite;
+  animation: marquee-move 22s linear infinite;
   font-family: 'Lato', Arial, sans-serif;
 }
 
