@@ -26,6 +26,7 @@ body {
   --dark-text: #555;
   --border-color: #060606;
   --highlight-color: #0099ff;
+  --bold-color: #FF4A00;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --font-size-base: 1rem;
   --font-size-large: 3rem;
@@ -263,7 +264,7 @@ body {
 
 
 .section-title .highlight {
-  color: var(--accent-color);
+  color:var(--bold-color); 
   font-weight: bold;
 }
 
@@ -348,7 +349,7 @@ body {
   cursor: pointer;
   animation: gradient-black 3s ease infinite;
   box-shadow:
-    0 0.25rem 0.375rem var(--accent-color),
+    0 0.25rem 0.375rem var(--bold-color),
     0 0.5rem 1rem rgba(255, 255, 255, 0.3);
 }
 
@@ -391,7 +392,7 @@ body {
 
 
 .primary-text .highlight {
-  color: var(--accent-color);
+  color: var(--bold-color); 
   font-weight: bold;
 }
 
@@ -493,6 +494,7 @@ body {
   animation: marquee-move 22s linear infinite;
   font-family: 'Lato', Arial, sans-serif;
 }
+
 
 /* Animatie van de marquee-tekst */
 @keyframes marquee-move {
@@ -692,6 +694,52 @@ body {
 }
 
 
+.dept-apparel {
+  background-color:var(--bold-color); 
+  padding: 1rem; 
+  text-align: left; 
+  position: relative;
+
+}
+
+.block-footer-v2__apparel-logo {
+  position: relative;
+  left: 5%; 
+}
+
+.apparel-arrow {
+  position: absolute;
+  right: 1rem; 
+  transform: translateY(-90%) rotate(-2deg); 
+}
 
 
+.apparel-arrow svg {
+  width: 1.3rem; 
+  height: 1.3rem; 
+  margin-bottom: 20px;
+}
+
+.apparel-items img {
+  display: inline-block;
+  width: 70%;
+  height: auto; 
+  max-height: 4.5rem; 
+  margin-right: 1rem; 
+}
+
+.apparel-details {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.875rem;
+  margin-top: 0.5rem; 
+  text-align: left;
+  display: flex;
+}
+
+.apparel-details div {
+  display: inline-block;
+  margin: 0; 
+  padding: 0 0.5rem; 
+  white-space: nowrap;
+}
 
