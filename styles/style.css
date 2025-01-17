@@ -253,7 +253,7 @@ p {
 
 .details {
   display: grid;
-  grid-template-columns: repeat(6, auto); /* Verdeel in zes gelijke kolommen */
+  grid-template-columns: repeat(6, auto); 
   gap: 0.5rem;
   align-items: center;
 }
