@@ -31,7 +31,7 @@ const activities = [
     minTemp: -10,
     maxTemp: 35,
     images: ["assets/walk.png", "assets/walking-2.png"],
-    description: "Precision, focus, and camaraderie <br> combined in a game of skill and strategy.<br> It's crazy!"
+    description: "A simple and natural exercise that connects <br> us to the world, rejuvenates the mind, and <br> nourishes the body."
   },
   {
     title: "Darts",
