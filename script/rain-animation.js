@@ -20,6 +20,10 @@ for (let i = 0; i < dropletQuantity; i++) {
    * @property {number} delay - Willekeurige vertraging voor de animatie.
    * @property {number} speed - Willekeurige snelheid van de animatie.
    */
+
+
+
+  
   const pos = Math.random() * 100; // Willekeurige horizontale positie
   const delay = Math.random(); // Willekeurige vertraging
   const speed = Math.random() * 0.5 + 0.5; // Willekeurige snelheid

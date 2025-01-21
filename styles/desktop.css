@@ -1,208 +1,706 @@
 /* Verberg mobiele header op desktops */
 @media (min-width: 1024px) {
-    .header-mobile {
-        display: none;
-    }
 
-    .header-desktop {
-        display: block;
-    }
+  /* Verberg de mobiele header op schermen groter dan 1024px */
+  .header-mobile {
+    display: none;
+  }
+
+  /* Toon de desktop header op grotere schermen */
+  .header-desktop {
+    display: block;
+  }
 }
-
 
 /* Desktop versie van de header */
 @media (min-width: 1024px) {
-    .header {
-        padding: 1.5rem 2rem;
-        grid-template-columns: auto 1fr auto;
-    }
 
-    .logo img {
-        height: 1.7rem;
-    }
+  /* Algemeen stijlen voor de header op desktops */
+  .header {
+    padding: 1.5rem 2rem;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  /* Stijling voor het logo binnen de header */
+  .logo img {
+    height: 1.7rem;
+    width: 200px;
+  }
 }
-
-
 
 /* Desktop Header CSS with Grid */
 @media (min-width: 1024px) {
-    header.header-desktop {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        /* Logo, menu en contactknop */
-        align-items: center;
-        padding: 2rem 2rem;
-        background-color: var(--primary2-color);
-    }
 
-    /* Logo Styling */
-    header.header-desktop .logo img {
-        max-height: 50px;
-        /* Zorgt voor consistente logohoogte */
-        object-fit: contain;
-    }
+  /* Gebruik een grid voor de header op desktop */
+  header.header-desktop {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 2rem 2rem;
+    background-color: var(--primary2-color);
+  }
 
-    /* Menu Styling */
-    header.header-desktop nav {
-        justify-self: center;
-        /* Plaatst het menu in het midden */
-    }
+  /* Logo Styling */
+  header.header-desktop {
+    /* Zorgt voor consistente logohoogte */
+    object-fit: contain;
+  }
 
-    header.header-desktop nav ul.desktop-menu {
-        list-style: none;
-        display: grid;
-        grid-auto-flow: column;
-        /* Horizontale menu-items */
-        gap: 1.5rem;
-        margin: 0;
-        padding: 0;
-    }
+  /* Menu Styling */
+  header.header-desktop nav {
+    justify-self: center;
+    /* Plaats het menu in het midden */
+  }
 
-    header.header-desktop nav ul.desktop-menu li {
-        font-size: var(--font-size-small);
-        font-weight: var(--font-weight-normal);
-        color: var(--text-color);
-    }
+  header.header-desktop nav ul.desktop-menu {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    /* Toon menu-items horizontaal */
+    gap: 1.5rem;
+    /* Ruimte tussen menu-items */
+    margin: 0;
+    padding: 0;
+  }
 
-    header.header-desktop nav ul.desktop-menu li a {
-        text-decoration: none;
-        color: var(--text-color);
-        transition: color 0.3s ease;
-    }
+  /* Menu-item specifieke stijl */
+  header.header-desktop nav ul.desktop-menu li {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-color);
+  }
 
+  /* Links in het menu */
+  header.header-desktop nav ul.desktop-menu li a {
+    text-decoration: none;
+    /* Verwijder onderstreping */
+    color: var(--text-color);
+    /* Tekstkleur */
+    transition: color 0.3s ease;
+    /* Animatie bij hover */
+  }
 
+  /* Contact Button */
+  header.header-desktop .contact-button {
+    justify-self: end;
+    /* Plaats rechts */
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 16px;
+    color: var(--secondary-color);
+    background-color: #000;
+    border-radius: 25px;
+    text-transform: uppercase;
+    /* Hoofdletters */
+    text-decoration: none;
+  }
 
-    /* Contact Button */
-    header.header-desktop .contact-button {
-        justify-self: end;
-        display: inline-block;
-        padding: 0.8rem 1.5rem;
-        font-size: 16px;
-        color: var(--primary2-color);
-        background-color: #000;
-        border-radius: 25px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
+  /* Hover-effect voor de contact-knop */
+  header.header-desktop .contact-button:hover {
+    background-color: var(--primary2-color);
+    color: #000;
+    border-color: var(--primary2-color);
+    /* Verandert de randkleur */
+    border: 2px solid #000;
+  }
+}
 
-    header.header-desktop .contact-button:hover {
-        background-color: var(--primary2-color);
-        color: #000;
-        border-color: var(--primary2-color);
-        /* Verandert de randkleur bij hover */
-        border: 2px solid #000;
+/* Main content styling */
+@media (min-width: 1024px) {
 
-    }
+  /* Structuur voor de hoofdinhoud */
+  .main-content {
+    display: grid;
+    /* Gebruik een grid layout */
+    justify-items: center;
+    align-items: start;
+    text-align: center;
+    padding-top: 2rem;
+    row-gap: 1.5rem;
+    /* Afstand tussen rijen */
+    width: 80%;
+    margin: 0 auto;
+  }
 
+  /* Titel styling */
+  .main-title {
+    font-size: 6rem;
+    /* Grote titeltekst */
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    /* Geen extra ruimte tussen regels */
+    margin: 0 auto;
+    text-transform: uppercase;
+    /* Hoofdletters */
+    padding: 2rem;
+    overflow-wrap: break-word;
+    /* Lange woorden breken */
+  }
 
-    @media (min-width: 1024px) {
+  /* Styling specifiek voor "Way." */
+  .main-title span {
+    font-style: italic;
+    font-weight: 300;
+    display: inline;
+    margin-top: 0.5rem;
+    font-size: 6rem;
+  }
+}
 
-        /* Main content voor desktop */
-        .main-content {
-            display: grid;
-            justify-items: center;
-            align-items: start;
-            text-align: center;
-            padding-top: 2rem;
-            row-gap: 1.5rem;
-            width: 80%;
-            margin: 0 auto;
-        }
+/* Video Background Sectie - Desktop */
+@media screen and (min-width: 1024px) {
 
-        .main-title {
-            font-size: 6rem;
-            font-weight: var(--font-weight-bold);
-            line-height: 1;
-            margin: 0 auto;
-            text-transform: uppercase;
-            padding: 2rem;
-            overflow-wrap: break-word;
-        }
+  /* Video-sectie container */
+  .video-section {
+    position: relative;
+    width: 70vw;
+    /* Breedte op 70% van het scherm */
+    height: 70vh;
+    /* Hoogte op 70% van het scherm */
+    overflow: hidden;
+    z-index: 1;
+    /* Plaats boven andere elementen */
+  }
 
-        .main-title span {
-            font-style: italic;
-            font-weight: 300;
-            display: inline;
-            margin-top: 0.5rem;
-            font-size: 6rem;
-        }
-    }
-
-
-
-
-
-    /* Video Background Sectie - Desktop */
-    @media screen and (min-width: 1024px) {
-        .video-section {
-            position: relative;
-            width: 70vw;
-            height: 70vh;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            pointer-events: none;
-        }
-    }
-
+  /* Video-achtergrond */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Neem de volledige breedte */
+    height: 100%;
+    /* Neem de volledige hoogte */
+    object-fit: cover;
+    /* Video bedekt container zonder vervorming */
+    z-index: -1;
+    /* Plaats achter andere elementen */
+    pointer-events: none;
+  }
 }
 
 
+.read-less {
+  position: relative;
+  z-index: 10;
+  /* Plaats de knop boven andere elementen */
+}
+
+/* Wrapper voor de Weather Planner-pagina */
 @media (min-width: 1024px) {
 
-    /* Wrapper layout */
-    .page-wrapper {
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        gap: 3rem;
-        width: 100%;
-        max-width: 860px;
-        margin: 6rem 0 0 0;
-        padding: 0;
-        align-items: flex-start;
-        transform: translateX(-330px);
+  /* Layout voor de planner */
+  .page-wrapper {
+    display: grid;
+    /* Grid layout */
+    grid-template-columns: 10rem 1fr;
+    /* 2 kolommen */
+    position: relative;
+    gap: 3rem;
+    /* Afstand tussen kolommen */
+    width: 100%;
+    max-width: 53.125rem;
+    /* Maximale breedte */
+    margin: 37.5rem 0 0 0;
+    /* Marges */
+    padding: 0;
+    align-items: flex-start;
+    transform: translateX(-20.625rem);
+    /* Verschuif naar links */
+  }
+
+
+
+  /* Styling voor de temperatuur-sectie op desktops */
+  @media (min-width: 1024px) {
+    .temperature-section {
+      position: absolute;
+      top: -6.25rem;
+      /* Plaats de sectie boven de referentiecontainer */
+      left: 120%;
+      width: 23.75rem;
+      height: 20rem;
+      padding: 1rem;
+      /* Voeg binnenruimte toe */
+      text-align: left;
+      /* Tekst uitlijnen naar links */
+      animation: sunlight-move 3s infinite alternate ease-in-out;
+      /* Zachte animatie */
+      background: transparent;
+      /* Transparante achtergrond */
+    }
+  }
+
+
+
+  /* Slider-container */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    /* Transparante achtergrond */
+  }
+}
+
+
+
+
+/* Hoofdsectie voor de activiteitenweergave */
+@media (min-width: 1024px) {
+  #weather-activities {
+    position: absolute;
+    top: 40%;
+    left: 120%;
+    width: 23.125rem;
+    height: 15rem;
+    padding: 1rem;
+    /* Binnenruimte */
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 0.125rem solid rgba(255, 117, 24, 0.6);
+    background-color: #5115F7;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.625rem;
+    z-index: 9999;
+    perspective: 1000px;
+  }
+
+  #weather-activities .container {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+
+  #weather-activities:hover .container {
+    transform: rotateY(180deg);
+    /* Draai de container 180 graden bij hover */
+  }
+
+  #weather-activities:hover .container {
+    transform: rotateY(180deg);
+    /* Draai de container 180 graden bij hover */
+  }
+
+  /* Stijling voor de zijden van de 3D-container */
+  #weather-activities .side {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem;
+    color: #fff;
+    backface-visibility: hidden;
+    border-radius: 0.625rem;
+    background-color: #5115F7;
+  }
+
+  #weather-activities .front {
+    z-index: 2;
+    /* Plaats de voorkant bovenop */
+  }
+
+  #weather-activities .back {
+    transform: rotateY(180deg);
+    /* Draai de achterkant om */
+  }
+
+  /* Tekstinhoud in de container */
+  #weather-activities .content h1 {
+    text-align: left;
+    margin-right: 0.625rem;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  #weather-activities .content p {
+    margin-top: 30px;
+  }
+}
+
+
+
+/* Typ-effect voor labels van temperatuurinput */
+label[for="temperature-input"] {
+  display: inline-block;
+  animation: typing 3s steps(27, end) infinite alternate, blink 0.5s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1875rem solid var(--bold-color);
+  font-size: 1.5em;
+  width: 27ch;
+  max-width: 27ch;
+  /* Zorg dat de tekst niet breder wordt */
+}
+
+
+/* Keyframe animaties voor het typ-effect */
+@keyframes typing {
+  from {
+    width: 0;
+    /* Start zonder zichtbare tekst */
+  }
+
+  to {
+    width: 27ch;
+    /* Toon volledige tekstlengte */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+    /* Zorg dat de cursor knippert door kleur te verbergen */
+  }
+}
+
+
+
+/* Styling voor de kaarten binnen de activiteitenweergave */
+@media (min-width: 1024px) {
+  .activity-card {
+    background: linear-gradient(145deg, #4c23d6, #6a5df8);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem; /* Voeg ruimte toe onder de kaarten */
+  }
+
+  /* Afbeeldingen binnen de kaarten */
+  .activity-card img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Carousel afbeelding */
+  #carousel-image {
+    width: 85%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+
+  /* Stijling voor de knoppen in de carousel */
+  .carousel-controls button {
+    backdrop-filter: blur(1.25rem);
+    background: linear-gradient(135deg, #3e8ef7, #6a5df8);
+    box-shadow:
+      0 0.75rem 1.875rem rgba(62, 142, 247, 0.5),
+      0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border: none;
+    margin-bottom: 2rem;
+    border-radius: 3.125rem;
+    padding: 0.75rem 2.25rem;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+
+
+  /* Modaal venster binnen de carousel */
+  .modal {
+    display: none;
+    position: fixed;
+    left: 70%;
+    transform: translate(-50%, 0);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    width: 60%;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 85vh;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Stijling voor tekst binnen de modaal */
+  .modal p {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.02rem;
+    text-align: justify;/* Uitlijnen van tekst voor nette opmaak */
+  }
+}
+
+
+
+
+
+
+
+/* Stijling voor de forecast-sectie (aankomende temperaturen) */
+
+@media (min-width: 1024px) {
+  .forecast-section {
+    position: absolute;
+    left: 10%;
+    top: 1.25rem;
+
+    width: 80%;
+    padding: 2rem;
+    transform: translateX(-0.8125rem);
+
+    color: #ffffff;
+  }
+
+
+
+
+  @media (min-width: 1024px) {
+    #target {
+      width: 100%;
+      height: 100vh;
+      opacity: 0;
     }
 
-    /* Blauwe container */
-    .page-wrapper>*:first-child {
-        grid-column: 1 / 2;
-        padding: 2rem;
-        color: white;
-        max-width: 300px;
-        width: 100%;
+    /* Styling voor weersiconen */
+
+    .weather {
+      width: 6.25rem;
+      height: 6.25rem;
+      background-size: cover;
+      position: absolute;
     }
 
-    /* Inhoud aan de rechterkant */
-    .page-wrapper>*:not(:first-child) {
-        grid-column: 2 / 3;
-        padding: 2rem;
+    /* Lijst met weersvoorspellingen */
+
+    .weather {
+      z-index: 1;
+      /* Plaats animaties achter de tekst */
     }
+
+    /* Stijling voor de lijst met weersvoorspellingen */
+
+    .forecast-list {
+      z-index: 2;
+      /* Zorg dat de tekst erboven blijft */
+    }
+
+
+    .toggle-content-btn {
+      position: relative;
+      z-index: 10;
+      /* Plaats de knop boven andere elementen */
+    }
+
+
+    /* Newsletter sectie voor desktops */
+
+
 
 
 
 
     @media (min-width: 1024px) {
+      .newsletter-section {
+        margin: 8rem auto;
+        max-width: 56.25rem;
+        text-align: center;
+        background: #5115F7;
+        background: url('assets/wolk.jpg') no-repeat center right;
+        /* Achtergrondafbeelding */
+        border-radius: 0.625rem;
+        color: #fff;
+        box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.1);
+      }
 
-        /* Verberg de elementen op desktop.... */
-        .forecast-section,
-        .newsletter-section,
-        .temperature-section,
-        .call-to-action-section,
-        .location-menu,
-        .dept-apparel,
-        .footer-section,
-        .mobile-footer {
-            display: none;
+
+
+      .newsletter-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      .newsletter-subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Formulier styling */
+      .newsletter-form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 2rem;
+        text-align: left;
+        background: #fff;
+        color: #333;
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+      }
+
+      .newsletter-form input::placeholder {
+        color: #aaa;
+      }
+
+      /* Knop styling */
+      .newsletter-form button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #0074ff;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-form button:hover {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.3);
+      }
+
+
+
+      .animated-cloud {
+        position: absolute;
+        top: 5%;
+        right: -6.25rem;
+        width: 9.375rem;
+        animation: moveClouds 10s linear infinite;
+      }
+
+      @keyframes moveClouds {
+        0% {
+          right: -12.5rem;
+
         }
+
+        100% {
+          right: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* Specifieke styling voor desktop footer  */
+@media (min-width: 1024px) {
+  .logo-section {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+    margin-top: 100rem;
+  }
+
+
+  .dept-logo {
+    width: 16rem;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .location-toggle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    animation: color-change 5s infinite;
+  }
+
+
+/* Styling voor het pijltje (row SVG) */
+.apparel-arrow {
+  position: absolute; 
+  left: 85rem;
+  top: 20%; 
+  transform: translateY(-50%) rotate(-2deg); /* Verticale uitlijning en lichte rotatie */
+  cursor: pointer; 
+}
+
+/* Styling voor de apparel-sectie in de footer */
+.dept-apparel {
+  position: relative; 
+  padding: 1rem;
+  background-color: var(--bold-color);
+  text-align: left;
+  height: 170px;
+  margin-top: 5%;
+}
+
+
+
+.apparel-items img {
+  display: inline-block;
+  width: 35%;
+  height: auto; 
+  max-height: 4.5rem; 
+  margin-right: 1rem;
+  margin-top: 2%; 
+}
+
+
+  @keyframes color-change {
+    0% {
+      color: #fff;
+
     }
 
+    25% {
+      color: #ef5b26;
+      /* Oranje tekst */
+    }
+
+    50% {
+      color: #000000;
+      /* Groene tekst */
+    }
+
+    75% {
+      color: #1e90ff;
+      /* Blauwe tekst */
+    }
+
+    100% {
+      color: #fff;
+      /* Terug naar wit */
+    }
+  }
+
+
+
+
+  @media (min-width: 1024px) {
+    .mobile-footer {
+      display: none;
+      /* Verberg de volledige footer op desktops */
+    }
+  }
 }
