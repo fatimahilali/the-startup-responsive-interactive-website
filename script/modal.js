@@ -83,8 +83,8 @@ function openModal(activity = null) {
 function generateCarouselControls() {
   return `
     <div class="carousel-controls">
-      <button onclick="prevImage()">Vorige</button>
-      <button onclick="nextImage()">Volgende</button>
+      <button onclick="prevImage()">previous</button>
+      <button onclick="nextImage()">next</button>
     </div>
   `;
 }
