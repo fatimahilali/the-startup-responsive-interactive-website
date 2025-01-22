@@ -22,19 +22,19 @@ Foto's
 
 Hieronder vind je een galerij met afbeeldingen van de website:
 
-
 <div class="photo-gallery">
-  <img src="assets/read1.jpg" alt="Beschrijving foto 1">
-  <img src="assets/read2.jpg" alt="Beschrijving foto 2">
-  <img src="assets/read3.jpg" alt="Beschrijving foto 3">
-  <img src="assets/read4.jpg" alt="Beschrijving foto 4">
-  <img src="assets/read5.jpg" alt="Beschrijving foto 5">
-  <img src="assets/read6.jpg" alt="Beschrijving foto 6">
-  <img src="assets/read7.jpg" alt="Beschrijving foto 7">
-  <img src="assets/read8.jpg" alt="Beschrijving foto 8">
-  <img src="assets/read9.jpg" alt="Beschrijving foto 9">
-  <img src="assets/read10.jpg" alt="Beschrijving foto 10">
+  <img src="assets/read1.jpg" alt="Beschrijving foto 1" style="width: 150px; height: auto;">
+  <img src="assets/read2.jpg" alt="Beschrijving foto 2" style="width: 150px; height: auto;">
+  <img src="assets/read3.jpg" alt="Beschrijving foto 3" style="width: 150px; height: auto;">
+  <img src="assets/read4.jpg" alt="Beschrijving foto 4" style="width: 150px; height: auto;">
+  <img src="assets/read5.jpg" alt="Beschrijving foto 5" style="width: 150px; height: auto;">
+  <img src="assets/read6.jpg" alt="Beschrijving foto 6" style="width: 150px; height: auto;">
+  <img src="assets/read7.jpg" alt="Beschrijving foto 7" style="width: 150px; height: auto;">
+  <img src="assets/read8.jpg" alt="Beschrijving foto 8" style="width: 150px; height: auto;">
+  <img src="assets/read9.jpg" alt="Beschrijving foto 9" style="width: 150px; height: auto;">
+  <img src="assets/read10.jpg" alt="Beschrijving foto 10" style="width: 150px; height: auto;">
 </div>
+
 
 
 Live Versie

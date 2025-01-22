@@ -253,8 +253,7 @@
     left: 120%;
     width: 23.125rem;
     height: 15rem;
-    padding: 1rem;
-    /* Binnenruimte */
+    padding: 1rem;/* Binnenruimte */
     box-sizing: border-box;
     overflow: hidden;
     border: 0.125rem solid rgba(255, 117, 24, 0.6);
@@ -384,13 +383,12 @@ label[for="temperature-input"] {
 
   /* Carousel afbeelding */
   #carousel-image {
-    width: 85%;
+    width: 100%;
     height: 25rem;
     object-fit: cover;
     border-radius: 1rem;
     margin-bottom: 1.5rem;
   }
-
 
 
   /* Stijling voor de knoppen in de carousel */
@@ -421,7 +419,7 @@ label[for="temperature-input"] {
     transform: translate(-50%, 0);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
-    width: 60%;
+    width: 50%;
     z-index: 1000;
     overflow-y: auto;
     max-height: 85vh;
@@ -430,7 +428,7 @@ label[for="temperature-input"] {
 
   /* Stijling voor tekst binnen de modaal */
   .modal p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2;
     color: var(--secondary-color);
     margin-top: 1.5rem;
