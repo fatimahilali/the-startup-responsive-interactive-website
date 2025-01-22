@@ -32,7 +32,7 @@ Hieronder vind je een galerij met afbeeldingen van de website:
   <img src="assets/read7.jpg" alt="Beschrijving foto 7" style="width: 150px; height: auto;">
   <img src="assets/read8.jpg" alt="Beschrijving foto 8" style="width: 150px; height: auto;">
   <img src="assets/read9.jpg" alt="Beschrijving foto 9" style="width: 150px; height: auto;">
-  <img src="assets/read10.jpg" alt="Beschrijving foto 10" style="width: 150px; height: auto;">
+  <img src="assets/read11.jpg" alt="Beschrijving foto 10" style="width: 150px; height: auto;">
 </div>
 
 
