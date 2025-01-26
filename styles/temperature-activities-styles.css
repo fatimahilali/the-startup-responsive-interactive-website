@@ -126,11 +126,11 @@
   /* ============================================= */
   
   .weather-activities {
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1.25rem; 
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3); 
     text-align: center;
-    max-width: 37.5rem; 
+    max-width: 52rem; 
     margin: 7rem auto; 
     background: linear-gradient(135deg, #4c23d6, #311ee7); 
     color: var(--secondary-color); /* Tekstkleur */
@@ -140,8 +140,7 @@
   /* Hover-effect voor de activiteiten sectie */
   .weather-activities:hover {
     transform: translateY(-0.625rem); /* Beweeg iets omhoog */
-    box-shadow: 0 0.75rem 2.25rem rgba(0, 0, 0, 0.4), 
-                0 0 1.25rem rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 0.75rem 2.25rem rgba(0, 0, 0, 0.4),  0 0 1.25rem rgba(255, 255, 255, 0.2); 
   }
   
   /* ============================================= */
@@ -299,7 +298,7 @@
     white-space: nowrap; /* Voorkom tekstterugloop */
     overflow: hidden; /* Verberg tekst buiten container */
     border-right: 0.1875rem solid var(--bold-color); 
-    font-size: 1.5em; 
+    font-size: 1em; 
     width: 27ch; 
     max-width: 27ch; 
   }
