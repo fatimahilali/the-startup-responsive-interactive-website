@@ -92,19 +92,6 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 
 
 
-
-## Bekijk de video's
-
-## Desktop versie
-
-[Bekijk de desktop video](./video/desktop.mp4)
-
-## Mobiele versie
-
-[Bekijk de mobiele video](./video/mobile.mp4)
-
-
-
 ## Naamgeving
 
 Voor consistentie en duidelijkheid heb ik de volgende conventies toegepast:
