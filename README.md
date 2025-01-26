@@ -97,11 +97,11 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 
 ## Desktop versie
 
-[![Bekijk de desktop video](https://via.placeholder.com/640x360.png?text=Desktop+Video)](./video/desktop.mp4)
+[Bekijk de desktop video](./video/desktop.mp4)
 
 ## Mobiele versie
 
-[![Bekijk de mobiele video](https://via.placeholder.com/360x640.png?text=Mobile+Video)](./video/mobile.mp4)
+[Bekijk de mobiele video](./video/mobile.mp4)
 
 
 
