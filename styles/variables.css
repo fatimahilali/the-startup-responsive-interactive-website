@@ -1,0 +1,33 @@
+body {
+  /* Font */
+  --font-family-base: 'Lato', Arial, sans-serif;
+
+  /* Kleuren */
+  --primary-color: #5115F7;
+  --secondary-color: #ffffff;
+  --tertiary-color: #f3f3ff;
+  --highlight-color: #0099ff;
+
+  --text-color: #333;
+  --light-text: #666;
+  --dark-text: #555;
+
+  --border-color: #060606;
+  --bold-color: #FF4A00;
+
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Typografie */
+  --font-size-base: 1rem;
+  --font-size-medium: 2.25rem;
+  --font-size-large: 3rem;
+  --font-size-small: 1.125rem;
+
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+
+  /* Ruimtes (marges en paddings) */
+  --spacing-small: 1.5rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 5rem;
+}

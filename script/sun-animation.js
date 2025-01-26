@@ -4,14 +4,14 @@
  * @description Animeert willekeurige weersymbolen (zoals zonnen) die vallen en horizontaal bewegen op het scherm.
  * Deze animatie is ontworpen met GSAP om een dynamisch en aantrekkelijk effect te creëren.
  * @requires gsap
- * @see https://greensock.com/docs/
+ * @see https://greensock.com/docs/  
  */
 
 console.clear(); // Wis de console voor een schone weergave
 
 // Globale variabelen
 const rnd = gsap.utils.random; // Sneltoegang tot GSAP's random util
-const target = document.querySelector("#target"); // Het container-element voor de animaties
+const target = document.querySelector(".target"); // Het container-element voor de animaties
 const w = window.innerWidth; // Breedte van het scherm
 const h = window.innerHeight; // Hoogte van het scherm
 const weatherCount = 50; // Aantal weerobjecten dat wordt gegenereerd

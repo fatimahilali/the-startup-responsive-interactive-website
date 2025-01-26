@@ -1,0 +1,333 @@
+/* ============================================= */
+/* Activity Card Styling                         */
+/* ============================================= */
+
+.activity-card {
+    background: linear-gradient(145deg, #4c23d6, #6a5df8); 
+    backdrop-filter: blur(0.5rem); /* Wazig effect op de achtergrond */
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3); 
+    padding: 1.5rem; 
+    text-align: left; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 2rem; 
+  }
+  
+  /* ============================================= */
+  /* Activity Card Title Styling                   */
+  /* ============================================= */
+  
+  .activity-card h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 1rem; 
+    color: var(--secondary-color);
+    font-family: var(--font-family-base); 
+    font-weight: var(--font-weight-bold); 
+    text-align: center; 
+    text-transform: capitalize; /* Eerste letter hoofdletter */
+    letter-spacing: 0.0625rem; /* Ruimte tussen letters */
+    position: relative; 
+    text-shadow: 0 0.125rem 0.3125rem rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Decoratieve lijn onder de titel */
+  .activity-card h3::after {
+    content: ""; /* Voegt een lijn toe */
+    position: absolute;
+    bottom: -0.5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60%;
+    height: 0.25rem; 
+    background: linear-gradient(90deg, #ff7518, #5115F7); /* Gradient */
+    border-radius: 0.3125rem; 
+  }
+  
+  /* ============================================= */
+  /* View Button Styling                           */
+  /* ============================================= */
+  
+  .view-event-button {
+    padding: 0.625rem 1.25rem; /* Binnenruimte */
+    background: linear-gradient(145deg, #4c23d6, #6a5df8); 
+    color: var(--secondary-color); 
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold); 
+    border: none;
+    border-radius: 1.5625rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    margin-top: 0.1rem; 
+  }
+  
+  /* Hover-effect voor de knop */
+  .activity-card .view-event-button:hover {
+    transform: scale(1.05); /* Vergroot de knop licht bij hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); 
+  }
+  
+  /* Actieve (klik) stijl voor de knop */
+  .view-event-button:active {
+    transform: scale(0.95); 
+  }
+  
+  /* ============================================= */
+  /* Content Styling                               */
+  /* ============================================= */
+  
+  /* Verborgen secties in de kaart */
+  .section {
+    margin-bottom: 1.5rem; 
+    display: none; /* Verberg standaard */
+  }
+  
+  /* Lijsten binnen de kaart */
+  .activity-list {
+    display: grid; 
+    grid-template-columns: 1fr; /* Één kolom */
+    gap: 1.5rem; /* Ruimte tussen items */
+  }
+  
+  /* ============================================= */
+  /* Image Styling                                 */
+  /* ============================================= */
+  
+  /* Afbeeldingen binnen de kaarten */
+  .activity-card img {
+    width: 100%; 
+    height: 15.625rem; 
+    object-fit: cover; 
+    border-radius: 1rem; 
+    margin-bottom: 1.8rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  /* Hover-effect voor afbeeldingen */
+  .activity-card img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); 
+  }
+  
+  /* ============================================= */
+  /* Desktop Styling                               */
+  /* ============================================= */
+  
+  @media (min-width: 1024px) {
+    /* Desktop-specific styling voor afbeeldingen */
+    .activity-card img {
+      height: 20rem; 
+      border-radius: 1.25rem; 
+      margin-bottom: 2rem; 
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  }
+  
+  
+  
+  /* ============================================= */
+  /* Carousel Image Styling                        */
+  /* ============================================= */
+  
+  .carousel-image {
+    width: 100%; 
+    height: 20rem; 
+    object-fit: cover; 
+    border-radius: 0.75rem; 
+    margin-bottom: 1rem; 
+  }
+  
+  /* ============================================= */
+  /* Carousel Overlay Styling                      */
+  /* ============================================= */
+  
+  .overlay {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; /* Plaats boven andere inhoud */
+  }
+  
+  /* ============================================= */
+  /* Carousel Modal Styling                        */
+  /* ============================================= */
+  
+  .modal {
+    display: none; /* Verberg standaard */
+    position: fixed; /* Vast positie binnen de viewport */
+    top: 10%; 
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    background: rgba(255, 255, 255, 0.1); /* Transparante witte achtergrond */
+    border-radius: 0.75rem;
+    width: 90%; 
+    z-index: 1000; 
+    overflow-y: auto; 
+    max-height: 80vh; /* Maximale hoogte */
+    margin-bottom: 2rem;
+  }
+  
+  /* Styling voor paragrafen in de modal */
+  .modal p {
+    font-size: var(--font-size-base); 
+    line-height: 1.8; /* Regelhoogte */
+    color: var(--secondary-color);
+    margin-top: 1rem; 
+    margin-bottom: 2rem;
+    font-weight: 300; 
+    letter-spacing: 0.01rem; 
+    font-family: var(--font-family-base); 
+    text-align: justify; 
+  }
+  
+  /* Styling voor de titel in de modal */
+  .modal h2 {
+    font-family: var(--font-family-base); 
+    font-size: 1.2rem; 
+    font-weight: var(--font-weight-bold); 
+    color: transparent; 
+    margin: 0.725rem 0 2rem; 
+    text-align: left; 
+    text-transform: uppercase;
+    letter-spacing: 0.09rem; 
+    position: relative;
+    display: inline-block; 
+    -webkit-text-stroke: 0.1rem var(--secondary-color);
+    animation: text-animation 4s ease-in-out forwards; 
+  }
+  
+  /* ============================================= */
+  /* Keyframe Animations                           */
+  /* ============================================= */
+  
+  @keyframes text-animation {
+    0% {
+      color: transparent; /* Begin met transparante tekst */
+      -webkit-text-stroke: 0.1rem var(--secondary-color); /* Alleen de rand zichtbaar */
+      opacity: 0;
+    }
+    50% {
+      opacity: 1; /* Maak de tekst zichtbaar */
+      color: transparent; /* Alleen de rand zichtbaar */
+    }
+    100% {
+      color: var(--secondary-color); /* Vul de tekst met kleur */
+      -webkit-text-stroke: 0; /* Verwijder de rand */
+    }
+  }
+  
+  /* ============================================= */
+  /* Close Button Styling                          */
+  /* ============================================= */
+  
+  .close-modal {
+    position: absolute; 
+    top: 0.625rem; 
+    right: 0.625rem;
+    width: 2.25rem; 
+    height: 2.25rem; 
+    cursor: pointer; 
+    background-color: rgba(62, 142, 247, 0.8); 
+    border: none;
+    border-radius: 50%; 
+    z-index: 1001; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  /* Hover-effect voor de sluitknop */
+  .close-modal:hover {
+    background-color: rgba(62, 142, 247, 1); 
+  }
+  
+  /* Kruisicoon in de sluitknop */
+  .close-modal::before,
+  .close-modal::after {
+    content: ""; /* Voeg een lijn toe */
+    position: absolute;
+    top: 50%; /* Plaats in het midden verticaal */
+    left: 50%; /* Plaats in het midden horizontaal */
+    width: 1rem; /* Breedte van de lijn */
+    height: 0.125rem; /* Dikte van de lijn */
+    background-color: var(--secondary-color); 
+    transform-origin: center; /* Transformeer vanaf het midden */
+  }
+  
+  .close-modal::before {
+    transform: translate(-50%, -50%) rotate(45deg); /* Eerste schuine lijn */
+  }
+  
+  .close-modal::after {
+    transform: translate(-50%, -50%) rotate(-45deg); /* Tweede schuine lijn */
+  }
+  
+  /* ============================================= */
+  /* Carousel Controls                             */
+  /* ============================================= */
+  
+  .carousel-controls {
+    text-align: center; 
+    margin-top: 1.25rem;
+  }
+  
+  /* Knoppen binnen de carousel-controls */
+  .carousel-controls button {
+    backdrop-filter: blur(1.25rem); /* Wazige achtergrond */
+    background: linear-gradient(135deg, #3e8ef7, #6a5df8); 
+    box-shadow:  0 0.75rem 1.875rem rgba(62, 142, 247, 0.5),  0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); 
+    color: var(--secondary-color);
+    border: none; 
+    border-radius: 3.125rem;
+    padding: 0.75rem 2.25rem; /* Binnenruimte */
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+    margin-bottom: 2rem; 
+  }
+  
+  /* Hover-effect voor de knoppen */
+  .carousel-controls button:hover {
+    background: linear-gradient(135deg, #6a5df8, #3e8ef7); 
+    transform: translateY(-0.3125rem) scale(1.1); 
+    box-shadow:  0 0.9375rem 2.1875rem rgba(62, 142, 247, 0.6), 0 0.375rem 1.25rem rgba(0, 0, 0, 0.3); 
+  }
+  
+  /* Actieve status voor de knoppen */
+  .carousel-controls button:active {
+    transform: translateY(0.125rem) scale(0.98); 
+    box-shadow: 0 0.5rem 1.25rem rgba(62, 142, 247, 0.4), 0 0.125rem 0.625rem rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* ============================================= */
+  /* Desktop-Specific Styling                      */
+  /* ============================================= */
+  
+  @media (min-width: 1024px) {
+    .carousel-image {
+      height: 25rem; 
+      border-radius: 1rem; 
+      margin-bottom: 1.5rem; 
+    }
+  
+    .modal {
+      left: 70%; 
+      width: 50%;
+      max-height: 85vh; 
+      margin-bottom: 2.5rem; 
+    }
+  
+    .modal p {
+      font-size: 1rem; 
+      line-height: 2;
+      margin-top: 1.5rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.02rem; 
+    }
+  }
+  

@@ -1,0 +1,342 @@
+/* Algemene code voor mobiel first version */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+
+  overflow-x: hidden;/* Verwijder horizontale scroll */
+}
+
+
+
+/* Verberg desktop header op mobiele apparaten */
+@media (max-width: 1024px) {
+  .header-desktop {
+    display: none;
+  }
+}
+
+/* Desktop header styling */
+@media (min-width: 1024px) {
+  .header-desktop {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--primary2-color);
+  }
+
+  /* Logo Styling */
+  .header-desktop .logo img {
+    height: 1.7rem;
+    width: 200px;
+    object-fit: contain;
+  }
+
+  /* Menu Styling */
+  .header-desktop nav {
+    justify-self: center;
+  }
+
+  .header-desktop nav ul.desktop-menu {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* Menu-item specifieke stijl */
+  .header-desktop nav ul.desktop-menu li {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-color);
+  }
+
+  /* Links in het menu */
+  .header-desktop nav ul.desktop-menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+  }
+
+  
+
+  /* Contact Button */
+  .header-desktop .contact-button {
+    justify-self: end;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 16px;
+    color: var(--secondary-color);
+    background-color: #000;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover-effect voor de contact-knop */
+  .header-desktop .contact-button:hover {
+    background-color: var(--primary2-color);
+    color: #000;
+    border: 2px solid #000;
+  }
+}
+
+
+/* ============================================= */
+/* Main Content Styling - Mobile First Approach  */
+/* ============================================= */
+
+.main-content {
+  display: grid;
+  justify-items: center; 
+  align-items: center; 
+  text-align: center; 
+  row-gap: 1rem; 
+  width: 100%; 
+
+  /* Desktop-specific styling */
+  @media (min-width: 1024px) {
+    align-items: start; /* Start de inhoud bovenaan */
+    padding-top: 2rem; 
+    row-gap: 1.5rem; /* ruimte tussen rijen */
+    width: 80%; 
+    margin: 0 auto; 
+  }
+}
+
+/* ============================================= */
+/* Main Title Styling - Mobile First Approach    */
+/* ============================================= */
+
+.main-title {
+  font-size: 2rem; 
+  font-weight: var(--font-weight-bold); 
+  text-transform: uppercase; 
+  width: 100%;
+  font-family: var(--font-family-base); 
+}
+
+/* Desktop-specific styling for main title */
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 6rem; 
+    line-height: 1; 
+    margin: 0 auto;
+    padding: 2rem;
+    overflow-wrap: break-word; /* Lange woorden breken */
+  }
+}
+
+/* ============================================= */
+/* Styling for Highlighted Text (e.g., "Way.")   */
+/* ============================================= */
+
+.main-title span {
+  font-style: normal; 
+  font-weight: var(--font-weight-normal); 
+  display: inline-block; 
+  font-size: 1.5rem;
+  font-family: var(--font-family-base); 
+
+  /* Desktop-specific styling */
+  @media (min-width: 1024px) {
+    font-style: italic; 
+    font-weight: 300; 
+    display: inline;
+    margin-top: 0.5rem; 
+    font-size: 6rem; 
+  }
+}
+
+/* ============================================= */
+/* Rain Animation Section                        */
+/* ============================================= */
+
+.rain-container {
+  position: absolute; 
+  top: 15%; 
+  left: 0; 
+  width: 100vw; 
+  height: 55%; 
+  pointer-events: none; 
+  overflow: hidden; 
+}
+
+/* Animatie voor regendruppels */
+.droplet {
+  position: absolute; 
+  top: 10%; 
+  left: 0; 
+  background-color: rgb(232, 230, 230);
+  opacity: 0.8; 
+  height: 2.5rem; 
+  width: 0.125rem; 
+  border-radius: 0.125rem; 
+}
+
+/* ============================================= */
+/* Video Background Section - Mobile First       */
+/* ============================================= */
+
+.video-section {
+  position: relative; 
+  width: 80%; 
+  height: 12.5rem; 
+  overflow: hidden; /* Verberg inhoud buiten de sectie */
+  z-index: 1; /* Zorg dat de video-sectie boven andere elementen ligt */
+  margin: 1.5625rem auto; 
+
+  /* Desktop-specifieke styling */
+  @media screen and (min-width: 1024px) {
+    width: 70vw; 
+    height: 70vh;
+  }
+}
+
+/* Video achtergrond binnen de sectie */
+.video-background {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; /* Video vult de container zonder vervorming */
+  z-index: -1; /* Plaatst de video achter andere elementen */
+  pointer-events: none; /* Video is niet interactief */
+}
+
+
+
+/* ============================================= */
+/* Weather Planner Page Wrapper                  */
+/* ============================================= */
+
+.page-wrapper {
+  margin: var(--spacing-large) auto; 
+  padding: var(--spacing-medium) var(--spacing-small); 
+  background-color: var(--primary-color); 
+  color: var(--secondary-color);
+  box-shadow: 0 4px 8px var(--shadow-color); 
+  text-align: left;
+
+  /* Desktop-specifieke styling */
+  @media (min-width: 1024px) {
+    display: grid; 
+    grid-template-columns: 10rem 1fr; /* Twee kolommen: eerste kolom vast, tweede flexibel */
+    position: relative; 
+    gap: 3rem; 
+    width: 100%; 
+    max-width: 53.125rem;
+    margin: 37.5rem 0 0 0; 
+    padding: 0;
+    align-items: flex-start;
+    transform: translateX(-20.625rem); /* Verschuif wrapper naar links */
+  }
+}
+
+/* ============================================= */
+/* Hidden Paragraph                              */
+/* ============================================= */
+
+.paragraph--hidden {
+  display: none; /* Verberg element */
+  opacity: 0; 
+  height: 0;
+  overflow: hidden; /* Verberg inhoud buiten de container */
+  transition: opacity 0.6s ease, height 0.6s ease; 
+}
+
+/* ============================================= */
+/* Weather Planner Logo Styling                  */
+/* ============================================= */
+
+.logo {
+  font-size: var(--font-size-medium); 
+  font-weight: var(--font-weight-bold); 
+  margin-bottom: var(--spacing-small); 
+}
+
+/* ============================================= */
+/* H2 Title Styling                              */
+/* ============================================= */
+
+h2 {
+  font-size: var(--font-size-medium); 
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-base); 
+  margin: 0; 
+  text-transform: none; 
+  line-height: 1.5;
+  margin-bottom: var(--spacing-medium); 
+}
+
+/* ============================================= */
+/* Paragraph Styling                             */
+/* ============================================= */
+
+p {
+  font-size: var(--font-size-small); 
+  font-family: var(--font-family-base);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-small); 
+  color: #CCCCCC; 
+  letter-spacing: 0.09rem; 
+}
+
+/* ============================================= */
+/* "Read More" Button Styling                    */
+/* ============================================= */
+
+.toggle-content-btn {
+  margin-top: var(--spacing-small); 
+  color: var(--secondary-color); 
+  text-decoration: underline; 
+  cursor: pointer; 
+  text-align: center;
+  background-color: transparent; /* Transparante achtergrond */
+  border: none; 
+  font-size: var(--font-size-base); 
+  position: relative; 
+  z-index: 10; /* Plaats knop boven andere elementen */
+}
+
+/* ============================================= */
+/* "Read Less" Link Styling                      */
+/* ============================================= */
+
+.read-less {
+  display: none; /* Verberg standaard */
+  margin-top: var(--spacing-small);
+  color: var(--secondary-color); 
+  text-decoration: underline; 
+  cursor: pointer; 
+  text-align: center;
+  font-size: var(--font-size-base); 
+  position: relative; 
+  z-index: 10; /* Plaats link boven andere elementen */
+}
+
+/* ============================================= */
+/* General Hidden Class                          */
+/* ============================================= */
+
+.hidden {
+  display: none; /* Verberg element */
+}
+
+
+
+
+
+
