@@ -112,47 +112,53 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 
 ## Codefragmenten
 
+HTML (Structuur van de temperatuur-sectie):
 
-### HTML (Structuur van de temperatuur-sectie):
-```html
 <section class="temperature-section">
   <input type="range" class="time-slider" min="0" max="23" value="12" />
   <div class="temperature-display">20°C</div>
 </section>
 
 
-### CSS:
-Gebruik van CSS-variabelen voor consistente styling.
+CSS (Styling van de kaarten):
 
-#### Codevoorbeeld:
-```css
-body {
-  /* Font */
-  --font-family-base: 'Lato', Arial, sans-serif;
-
-  /* Kleuren */
-  --primary-color: #5115F7;
-  --secondary-color: #ffffff;
-  --tertiary-color: #f3f3ff;
-  --highlight-color: #0099ff;
+.activity-card {
+  background: linear-gradient(145deg, #4c23d6, #6a5df8);
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
 }
+
+.activity-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+JavaScript (Animatie met GSAP):
+
+gsap.to(".rain-container", {
+  opacity: 1,
+  duration: 1,
+  ease: "power2.out",
+});
+
+
 
 
 ## Naamgeving
 
 Voor consistentie en duidelijkheid heb ik de volgende conventies toegepast:
 
-### HTML:
-Klassennamen volgen het **BEM-principe** (Block, Element, Modifier). Dit zorgt voor een overzichtelijke structuur.  
-**Voorbeelden:**
-- `.temperature-section`: Hoofdsectie voor de temperatuurweergave.
-- `.activity-card`: Container voor een activiteit.
+HTML:
 
-### CSS:
+Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit maakt de structuur overzichtelijk.
+Voorbeeld:
+.temperature-section: Hoofdsectie voor de temperatuurweergave.
+.activity-card: Container voor een  activiteit.
+
+CSS:
 Gebruik van CSS-variabelen voor consistente styling.
 
-#### Codevoorbeeld:
-```css
 body {
   /* Font */
   --font-family-base: 'Lato', Arial, sans-serif;
@@ -211,7 +217,3 @@ Dept website (Footer)
 
 ## Licentie
 This project is licensed under the terms of the [MIT license](./LICENSE).
-
-
-
-
