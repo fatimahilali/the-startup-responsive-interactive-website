@@ -110,73 +110,21 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 </div>
 
 
-## Codefragmenten
-
-HTML (Structuur van de temperatuur-sectie):
-
-<section class="temperature-section">
-  <input type="range" class="time-slider" min="0" max="23" value="12" />
-  <div class="temperature-display">20°C</div>
-</section>
-
-
-CSS (Styling van de kaarten):
-
-.activity-card {
-  background: linear-gradient(145deg, #4c23d6, #6a5df8);
-  border-radius: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.activity-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-JavaScript (Animatie met GSAP):
-
-gsap.to(".rain-container", {
-  opacity: 1,
-  duration: 1,
-  ease: "power2.out",
-});
-
-
-
 
 ## Naamgeving
 
 Voor consistentie en duidelijkheid heb ik de volgende conventies toegepast:
 
 HTML:
-
-Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit maakt de structuur overzichtelijk.
-Voorbeeld:
-.temperature-section: Hoofdsectie voor de temperatuurweergave.
-.activity-card: Container voor een  activiteit.
+Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit zorgt voor een duidelijke en overzichtelijke structuur van de elementen.
 
 CSS:
-Gebruik van CSS-variabelen voor consistente styling.
+Voor de styling heb ik gebruik gemaakt van CSS-variabelen. Dit zorgt voor een consistente stijl in het hele project en maakt het eenvoudiger om thema's of kleuren aan te passen.
 
-body {
-  /* Font */
-  --font-family-base: 'Lato', Arial, sans-serif;
-
-  /* Kleuren */
-  --primary-color: #5115F7;
-  --secondary-color: #ffffff;
-  --tertiary-color: #f3f3ff;
-  --highlight-color: #0099ff;
-}
 
 JavaScript:
+De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 
-Functienamen beschrijven duidelijk hun doel
-Voorbeeld:
-getTemperature(): Haalt de huidige temperatuur op.
-filterActivities(): Filtert activiteiten op basis van temperatuur.
-openModal(): Opent een modaal venster.
 
 
 
@@ -205,9 +153,59 @@ GSAP-animaties voor soepele overgangen.
 Validatie van invoervelden voor verbeterde gebruiksvriendelijkheid.
 
 
+
+
+
+## Codefragmenten
+
+
+## HTML (Structuur van de temperatuur-sectie)
+Een sectie wordt gebruikt om een aparte temperatuurmodule te creëren:
+- Een slider om de tijd in te stellen.
+- Een display-element om de temperatuur weer te geven.
+
+```html
+<section class="temperature-section">
+  <input type="range" class="time-slider" min="0" max="23" value="12" />
+  <div class="temperature-display">20°C</div>
+</section>
+
+
+
+### CSS (Styling van de kaarten):
+
+ De kaarten hebben een visueel aantrekkelijke styling:
+- **Gradient-achtergrond** voor een vloeiende kleurverloop.
+- **Afgeronde hoeken** om een moderne uitstraling te creëren.
+- **Hover-effect** dat de kaart vergroot en een schaduw toevoegt om interactie te benadrukken.
+
+
+```css
+.activity-card {
+  background: linear-gradient(145deg, #4c23d6, #6a5df8);
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+```
+
+
+```javascript
+gsap.to(".rain-container", {
+  opacity: 1,
+  duration: 1,
+  ease: "power2.out",
+});
+```
+
+
+
+
 ## Bronnen
-
-
 GSAP Documentation: greensock.com/docs
 Web Docs: developer.mozilla.org
 Instructies: INSTRUCTIONS.md
