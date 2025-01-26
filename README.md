@@ -118,6 +118,13 @@ De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 
 ## video
 
+## Desktop versie
+
+[Bekijk de desktop video](./video/desktop.mp4)
+
+## Mobiele versie
+
+[Bekijk de mobiele video](./video/mobile.mp4)
 
 
 
