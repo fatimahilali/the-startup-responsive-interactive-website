@@ -91,71 +91,57 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 </div>
 
 
-mgeving
+
+## Naamgeving
+
 Voor consistentie en duidelijkheid heb ik de volgende conventies toegepast:
 
-HTML: Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit zorgt voor een duidelijke en overzichtelijke structuur van de elementen.
+HTML:
+Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit zorgt voor een duidelijke en overzichtelijke structuur van de elementen.
 
-CSS: Voor de styling heb ik gebruik gemaakt van CSS-variabelen. Dit zorgt voor een consistente stijl in het hele project en maakt het eenvoudiger om thema's of kleuren aan te passen.
+CSS:
+Voor de styling heb ik gebruik gemaakt van CSS-variabelen. Dit zorgt voor een consistente stijl in het hele project en maakt het eenvoudiger om thema's of kleuren aan te passen.
 
-JavaScript: De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 
-Live Versie
-https://github.com/fatimahilali/the-startup-responsive-interactive-website
+JavaScript:
+De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 
-Kenmerken
+
+
+
+## Live Versie
+
+ https://github.com/fatimahilali/the-startup-responsive-interactive-website
+
+
+
+## Kenmerken
 HTML
 
-Semantische structuur met elementen zoals
+Semantische structuur met elementen zoals <header>, <nav>, <main>, <footer>.
 
-, , , .
 CSS
 
-Flexbox en CSS Grid voor flexibele en responsieve lay-outs. Media queries om de website aan te passen aan verschillende schermformaten. Styling met schaduwen, transities, en verschillende kleurenpalet.
+Flexbox en CSS Grid voor flexibele en responsieve lay-outs.
+Media queries om de website aan te passen aan verschillende schermformaten.
+Styling met schaduwen, transities, en verschillende  kleurenpalet.
+
 
 JavaScript
 
-Dynamische componenten zoals carrousels en interactieve formulieren. GSAP-animaties voor soepele overgangen. Validatie van invoervelden voor verbeterde gebruiksvriendelijkheid.
-
-Codefragmenten
-HTML (Structuur van de temperatuur-sectie)
-Een sectie wordt gebruikt om een aparte temperatuurmodule te creëren:
-
-Een slider om de tijd in te stellen.
-Een display-element om de temperatuur weer te geven.
-<section class="temperature-section">
-  <input type="range" class="time-slider" min="0" max="23" value="12" />
-  <div class="temperature-display">20°C</div>
-</section>
+Dynamische componenten zoals carrousels en interactieve formulieren.
+GSAP-animaties voor soepele overgangen.
+Validatie van invoervelden voor verbeterde gebruiksvriendelijkheid.
 
 
 
-### CSS (Styling van de kaarten):
+## Bronnen
+GSAP Documentation: greensock.com/docs
+Web Docs: developer.mozilla.org
+Instructies: INSTRUCTIONS.md
+Youtube
+Dept website (Footer)
 
- De kaarten hebben een visueel aantrekkelijke styling:
-- **Gradient-achtergrond** voor een vloeiende kleurverloop.
-- **Afgeronde hoeken** om een moderne uitstraling te creëren.
-- **Hover-effect** dat de kaart vergroot en een schaduw toevoegt om interactie te benadrukken.
 
-
-```css
-.activity-card {
-  background: linear-gradient(145deg, #4c23d6, #6a5df8);
-  border-radius: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.activity-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-gsap.to(".rain-container", {
-  opacity: 1,
-  duration: 1,
-  ease: "power2.out",
-});
-Bronnen
-GSAP Documentation: greensock.com/docs Web Docs: developer.mozilla.org Instructies: INSTRUCTIONS.md Youtube Dept website (Footer)
-
-Licentie
-This project is licensed under the terms of the MIT license.
+## Licentie
+This project is licensed under the terms of the [MIT license](./LICENSE).
