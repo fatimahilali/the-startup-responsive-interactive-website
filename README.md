@@ -34,25 +34,6 @@ Weersvoorspelling: Een overzicht van de temperatuur gedurende de dag.
 "Read More"-functie: Meer tekst wordt zichtbaar gemaakt met  animatie.
 
 
-## Foto's
-
-Hieronder vind je een galerij met afbeeldingen van de website:
-
-<div class="photo-gallery">
-  <img src="assets/read1.jpg" alt="Beschrijving foto 1" style="width: 150px; height: auto;">
-  <img src="assets/read2.jpg" alt="Beschrijving foto 2" style="width: 150px; height: auto;">
-  <img src="assets/read3.jpg" alt="Beschrijving foto 3" style="width: 150px; height: auto;">
-  <img src="assets/read4.jpg" alt="Beschrijving foto 4" style="width: 150px; height: auto;">
-  <img src="assets/read5.jpg" alt="Beschrijving foto 5" style="width: 150px; height: auto;">
-  <img src="assets/read6.jpg" alt="Beschrijving foto 6" style="width: 150px; height: auto;">
-  <img src="assets/read7.jpg" alt="Beschrijving foto 7" style="width: 150px; height: auto;">
-  <img src="assets/read8.jpg" alt="Beschrijving foto 8" style="width: 150px; height: auto;">
-  <img src="assets/read9.jpg" alt="Beschrijving foto 9" style="width: 150px; height: auto;">
-  <img src="assets/read10.jpg" alt="Beschrijving foto 10" style="width: 150px; height: auto;">
-</div>
-
-
-
 
 ## Responsive Design
 
@@ -110,61 +91,38 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 </div>
 
 
-
-## Naamgeving
-
+mgeving
 Voor consistentie en duidelijkheid heb ik de volgende conventies toegepast:
 
-HTML:
-Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit zorgt voor een duidelijke en overzichtelijke structuur van de elementen.
+HTML: Klassennamen volgen het BEM-principe (Block, Element, Modifier). Dit zorgt voor een duidelijke en overzichtelijke structuur van de elementen.
 
-CSS:
-Voor de styling heb ik gebruik gemaakt van CSS-variabelen. Dit zorgt voor een consistente stijl in het hele project en maakt het eenvoudiger om thema's of kleuren aan te passen.
+CSS: Voor de styling heb ik gebruik gemaakt van CSS-variabelen. Dit zorgt voor een consistente stijl in het hele project en maakt het eenvoudiger om thema's of kleuren aan te passen.
 
+JavaScript: De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 
-JavaScript:
-De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
+Live Versie
+https://github.com/fatimahilali/the-startup-responsive-interactive-website
 
-
-
-
-## Live Versie
-
- https://github.com/fatimahilali/the-startup-responsive-interactive-website
-
-
-
-## Kenmerken
+Kenmerken
 HTML
 
-Semantische structuur met elementen zoals <header>, <nav>, <main>, <footer>.
+Semantische structuur met elementen zoals
 
+, , , .
 CSS
 
-Flexbox en CSS Grid voor flexibele en responsieve lay-outs.
-Media queries om de website aan te passen aan verschillende schermformaten.
-Styling met schaduwen, transities, en verschillende  kleurenpalet.
-
+Flexbox en CSS Grid voor flexibele en responsieve lay-outs. Media queries om de website aan te passen aan verschillende schermformaten. Styling met schaduwen, transities, en verschillende kleurenpalet.
 
 JavaScript
 
-Dynamische componenten zoals carrousels en interactieve formulieren.
-GSAP-animaties voor soepele overgangen.
-Validatie van invoervelden voor verbeterde gebruiksvriendelijkheid.
+Dynamische componenten zoals carrousels en interactieve formulieren. GSAP-animaties voor soepele overgangen. Validatie van invoervelden voor verbeterde gebruiksvriendelijkheid.
 
-
-
-
-
-## Codefragmenten
-
-
-## HTML (Structuur van de temperatuur-sectie)
+Codefragmenten
+HTML (Structuur van de temperatuur-sectie)
 Een sectie wordt gebruikt om een aparte temperatuurmodule te creëren:
-- Een slider om de tijd in te stellen.
-- Een display-element om de temperatuur weer te geven.
 
-```html
+Een slider om de tijd in te stellen.
+Een display-element om de temperatuur weer te geven.
 <section class="temperature-section">
   <input type="range" class="time-slider" min="0" max="23" value="12" />
   <div class="temperature-display">20°C</div>
@@ -191,27 +149,13 @@ Een sectie wordt gebruikt om een aparte temperatuurmodule te creëren:
   transform: scale(1.05);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
-```
-
-
-```javascript
 gsap.to(".rain-container", {
   opacity: 1,
   duration: 1,
   ease: "power2.out",
 });
-```
+Bronnen
+GSAP Documentation: greensock.com/docs Web Docs: developer.mozilla.org Instructies: INSTRUCTIONS.md Youtube Dept website (Footer)
 
-
-
-
-## Bronnen
-GSAP Documentation: greensock.com/docs
-Web Docs: developer.mozilla.org
-Instructies: INSTRUCTIONS.md
-Youtube
-Dept website (Footer)
-
-
-## Licentie
-This project is licensed under the terms of the [MIT license](./LICENSE).
+Licentie
+This project is licensed under the terms of the MIT license.
