@@ -118,7 +118,7 @@ De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 ## Kenmerken
 HTML
 
-Semantische structuur met elementen zoals <header>, <nav>, <main>, <footer>.
+Semantische structuur met elementen zoals header, nav, main, footer.
 
 CSS
 
