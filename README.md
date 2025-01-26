@@ -111,7 +111,7 @@ De functienamen zijn duidelijk gekozen en beschrijven exact wat de functie doet.
 
 ## Live Versie
 
- https://github.com/fatimahilali/the-startup-responsive-interactive-website
+ https://github.com/https://fatimahilali.github.io/the-startup-responsive-interactive-website/
 
 
 
