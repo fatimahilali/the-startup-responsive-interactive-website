@@ -95,8 +95,13 @@ Hieronder vind je een galerij met afbeeldingen van de website:
 
 ## Bekijk de video's
 
-- [Download de desktop-versie](./video/desktop.mp4)
-- [Download de mobiele versie](./video/mobile.mp4)
+## Desktop versie
+
+[![Bekijk de desktop video](https://via.placeholder.com/640x360.png?text=Desktop+Video)](./video/desktop.mp4)
+
+## Mobiele versie
+
+[![Bekijk de mobiele video](https://via.placeholder.com/360x640.png?text=Mobile+Video)](./video/mobile.mp4)
 
 
 
